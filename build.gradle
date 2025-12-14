@@ -10,13 +10,9 @@ repositories{
     maven{ url 'https://www.jitpack.io' }
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-        // Poner la ruta absoluta de tu JDK 21
-        vendor = JvmVendorSpec.ADOPTIUM
-        installationPath = file("C:/Program Files/Java/jdk-21.0.x")
-    }
+java{
+    targetCompatibility = 8
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 ext{
@@ -80,7 +76,7 @@ jar{
     }
 
     from(projectDir){
-        include "mod.hjson"
+        include "mod.json"
     }
 
     from("assets/"){
