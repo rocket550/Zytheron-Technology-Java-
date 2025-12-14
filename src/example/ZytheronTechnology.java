@@ -7,6 +7,8 @@ import arc.util.Time;
 import mindustry.game.EventType.ClientLoadEvent;
 import mindustry.mod.Mod;
 import mindustry.ui.dialogs.BaseDialog;
+//melis: Troket, you forget the imports
+import content.units.ZytheronUnits;
 
 public class ZytheronTechnology extends Mod{
 
@@ -29,7 +31,8 @@ public class ZytheronTechnology extends Mod{
 
     @Override
     public void loadContent(){
-        Log.info("Loading some example content.");
+        //and the load
+        ZytheronUnits.load();
     }
 
 }
