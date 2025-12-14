@@ -1,5 +1,6 @@
 package content.units;
 
+import mindustry.gen.*;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
 import mindustry.entities.bullet.LightningBulletType;
