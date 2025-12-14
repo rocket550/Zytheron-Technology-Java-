@@ -14,6 +14,7 @@ public class ZytheronUnits {
 
         electron = new UnitType("electron") {
             {
+                constructor = TankUnit::create;
                 researchCostMultiplier = 0.5f;
                 speed = 0.8f;
                 hitSize = 8f;
