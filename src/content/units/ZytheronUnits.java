@@ -87,7 +87,7 @@ public class ZytheronUnits {
                         lightning = 3;
                         lightningDamage = 2;
                         lightningColor = Color.valueOf("a9d8ff");
-                        lightningLength = 21;
+                        lightningLength = 7;
                         buildingDamageMultiplier = 1;
                         shootEffect = Fx.lightningShoot;
                         status = StatusEffects.shocked;
