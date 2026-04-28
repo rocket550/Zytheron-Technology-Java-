@@ -1,8 +1,10 @@
 package content.units;
 
+import arc.graphics.Color;
 import mindustry.gen.*;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
+import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.LightningBulletType;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
@@ -43,6 +45,7 @@ public class ZytheronUnits {
                 }}
             );
         }};
+
         voltage = new UnitType("voltage") {{
             constructor = TankUnit::create;
             researchCostMultiplier = 0.5f;
@@ -59,30 +62,25 @@ public class ZytheronUnits {
                     rotate = true;
                     shoot.shots = 4;
                     shoot.shotDelay = 8;
-                    bullet = new BasicBulletType(1f,2f) {{
+                    // Se agregan parámetros de velocidad (3f) y daño (10f) al constructor
+                    bullet = new BasicBulletType(3f, 10f) {{
                         collides = true;
                         collidesAir = true;
                         collidesTiles = true;
                         width = 10;
                         height = 10;
                         pierceCap = 4;
-                        range = 168;
-                        maxRange = 168;
-                        damage = 10;
-                        speed = 3;
                         lifetime = 60;
-                        backColor = "a9d8ff";
-                        frontColor = "a9d8ff";
+                        backColor = Color.valueOf("a9d8ff");
+                        frontColor = Color.valueOf("a9d8ff");
                         trailLength = 8;
                         trailWidth = 2;
-                        trailColor = a9d8ff;
+                        trailColor = Color.valueOf("a9d8ff");
                         inaccuracy = 4;
                         pierce = true;
-                        lightningLength = 7;
                         lightning = 3;
                         lightningDamage = 2;
-                        lightningAngle = 0;
-                        lightningColor = "a9d8ff";
+                        lightningColor = Color.valueOf("a9d8ff");
                         lightningLength = 21;
                         buildingDamageMultiplier = 1;
                         shootEffect = Fx.lightningShoot;
