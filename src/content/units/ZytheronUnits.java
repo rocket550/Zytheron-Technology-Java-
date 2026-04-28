@@ -24,7 +24,7 @@ public class ZytheronUnits {
             omniMovement = false;
             rotateMoveFirst = true;
             weapons.add(
-                new Weapon("electron-turret") {{
+                new Weapon("zytheron-electron-turret") {{
                     reload = 40f;
                     x = 0f;
                     y = 0f;
@@ -59,7 +59,7 @@ public class ZytheronUnits {
             omniMovement = false;
             rotateMoveFirst = true;
             weapons.add(
-                new Weapon("voltage-turret") {{
+                new Weapon("zytheron-voltage-turret") {{
                     reload = 60f;
                     x = 0f;
                     y = 0f;
