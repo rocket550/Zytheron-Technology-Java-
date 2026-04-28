@@ -20,6 +20,9 @@ public class ZytheronUnits {
             speed = 0.8f;
             hitSize = 8f;
             health = 190;
+            squareShape = true;
+            omniMovement = false;
+            rotateMoveFirst = true;
             weapons.add(
                 new Weapon("electron-turret") {{
                     reload = 40f;
@@ -52,6 +55,9 @@ public class ZytheronUnits {
             speed = 0.7f;
             hitSize = 8f;
             health = 590;
+            squareShape = true;
+            omniMovement = false;
+            rotateMoveFirst = true;
             weapons.add(
                 new Weapon("voltage-turret") {{
                     reload = 60f;
