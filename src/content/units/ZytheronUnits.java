@@ -59,7 +59,7 @@ public class ZytheronUnits {
                     rotate = true;
                     shoot.shots = 4;
                     shoot.shotDelay = 8;
-                    bullet = new BasicBulletType() {{
+                    bullet = new BasicBulletType(1f,2f) {{
                         collides = true;
                         collidesAir = true;
                         collidesTiles = true;
