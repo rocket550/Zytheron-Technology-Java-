@@ -50,24 +50,39 @@ public class ZytheronUnits {
             hitSize = 8f;
             health = 590;
             weapons.add(
-                new Weapon("electron-turret") {{
+                new Weapon("voltage-turret") {{
                     reload = 60f;
                     x = 0f;
                     y = 0f;
                     top = false;
                     mirror = false;
                     rotate = true;
-                    shoot.shots = 5;
+                    shoot.shots = 4;
                     shoot.shotDelay = 8;
-                    bullet = new LightningBulletType() {{
+                    bullet = new BasicBulletType() {{
                         collides = true;
                         collidesAir = true;
                         collidesTiles = true;
+                        width = 10;
+                        height = 10;
                         pierceCap = 4;
-                        range = 96;
-                        maxRange = 96;
-                        damage = 12;
+                        range = 168;
+                        maxRange = 168;
+                        damage = 10;
+                        speed = 3;
+                        lifetime = 60;
+                        backColor = "a9d8ff";
+                        frontColor = "a9d8ff";
+                        trailLength = 8;
+                        trailWidth = 2;
+                        trailColor = a9d8ff;
+                        inaccuracy = 4;
                         pierce = true;
+                        lightningLength = 7;
+                        lightning = 3;
+                        lightningDamage = 2;
+                        lightningAngle = 0;
+                        lightningColor = "a9d8ff";
                         lightningLength = 21;
                         buildingDamageMultiplier = 1;
                         shootEffect = Fx.lightningShoot;
