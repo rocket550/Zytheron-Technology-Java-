@@ -20,17 +20,35 @@ public class ZytheronUnits {
             speed = 0.8f;
             hitSize = 8f;
             health = 190;
+            armor = 3;
+            itemCapacity = 20;
             squareShape = true;
             omniMovement = false;
             rotateMoveFirst = true;
+            rotateSpeed = 3.6,
+            drownTimeMultiplier = 1.2;
+            treadRects [
+            {
+                x = 7;
+                y = -19;
+                width = 14;
+                height = 38;
+            }
+            ],
             weapons.add(
                 new Weapon("zytheron-electron-turret") {{
                     reload = 40f;
                     x = 0f;
                     y = 0f;
+                    shootX = 0;
+                    shootY = 4;
                     top = false;
                     mirror = false;
                     rotate = true;
+                    rotateSpeed = 4.2;
+                    recoil = 1.2;
+                    shake = 1;
+                    layerOffset = 0.0001;
                     bullet = new LightningBulletType() {{
                         collides = true;
                         collidesAir = true;
@@ -40,6 +58,7 @@ public class ZytheronUnits {
                         maxRange = 96;
                         damage = 22;
                         pierce = true;
+                        pierceCap = 4;
                         lightningLength = 21;
                         buildingDamageMultiplier = 1;
                         shootEffect = Fx.lightningShoot;
@@ -52,12 +71,15 @@ public class ZytheronUnits {
         voltage = new UnitType("voltage") {{
             constructor = TankUnit::create;
             researchCostMultiplier = 0.5f;
-            speed = 0.7f;
-            hitSize = 8f;
+            speed = 0.725f;
+            hitSize = 12f;
             health = 590;
+            armor:6,
             squareShape = true;
             omniMovement = false;
             rotateMoveFirst = true;
+            rotateSpeed = 2.6;
+            drownTimeMultiplier = 1.8;
             weapons.add(
                 new Weapon("zytheron-voltage-turret") {{
                     reload = 60f;
