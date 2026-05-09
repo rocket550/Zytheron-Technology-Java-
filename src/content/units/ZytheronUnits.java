@@ -74,7 +74,7 @@ public class ZytheronUnits {
             speed = 0.725f;
             hitSize = 12f;
             health = 590;
-            armor:6,
+            armor = 6;
             squareShape = true;
             omniMovement = false;
             rotateMoveFirst = true;
