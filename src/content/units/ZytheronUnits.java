@@ -27,14 +27,14 @@ public class ZytheronUnits {
             rotateMoveFirst = true;
             rotateSpeed = 3.6,
             drownTimeMultiplier = 1.2;
-            treadRects [
+            /*treadRects [
             {
                 x = 7;
                 y = -19;
                 width = 14;
                 height = 38;
             }
-            ],
+            ],*/
             weapons.add(
                 new Weapon("zytheron-electron-turret") {{
                     reload = 40f;
