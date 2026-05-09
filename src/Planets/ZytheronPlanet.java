@@ -1,47 +1,51 @@
 package planets;
 
-import arc.func.*;
 import arc.graphics.*;
-import arc.math.*;
-import arc.math.geom.*;
-import arc.struct.*;
-import arc.util.*;
-import mindustry.game.*;
-import mindustry.graphics.*;
-import mindustry.graphics.g3d.*;
-import mindustry.graphics.g3d.PlanetGrid.*;
-import mindustry.maps.planet.*;
 import mindustry.type.*;
-import mindustry.world.*;
-import mindustry.content.*; // Importante para Planets.sun
-import mindustry.world.meta.*;
+import mindustry.graphics.g3d.*;
+import mindustry.content.*;
+import mindustry.game.*;
+import mindustry.maps.planet.*;
 
-// ERROR 1 CORREGIDO: Todo debe estar dentro de una clase
 public class ZytheronPlanet {
-    
-    public static Planet zytheron; // Cambiado a minúscula por convención, pero puede ser Zytheron
+    public static Planet zytheron;
 
     public static void load() {
-        // ERROR 2 y 3 CORREGIDOS: Se cerró la comilla, se agregó la coma y se usó el nombre de variable correcto
         zytheron = new Planet("zytheron", Planets.sun, 1f, 3) {{
+            generator = new ZytheronGenerator();
             
-            // Generador (Asegúrate de que la clase ZytheronGenerator exista)
-            generator = new SerpuloPlanetGenerator();
+            // MESH: Aquí definimos el aspecto visual desde el espacio
+            meshLoader = () -> new MultiMesh(
+                // Capa 1: El cuerpo del planeta (Piedra y Arena)
+                new NoiseMesh(this, 15, 6, 1f, 3, 0.5f, 0.4f, 15f, 
+                    Color.valueOf("808080"), // Gris piedra
+                    Color.valueOf("f7e09a"), // Arena claro
+                    4, 0.5f, 0.4f, 0.5f),
+                
+                // Capa 2: Los océanos (Un poco más pequeños para que la tierra sobresalga)
+                // Usamos una esfera azul semi-transparente o un HexMesh azulado
+                new HexMesh(this, 5) {{
+                    color1 = Color.valueOf("2b60de").a(0.8f); // Azul océano
+                    color2 = Color.valueOf("1e419b").a(0.8f);
+                }}
+            );
+
+            // ATMÓSFERA: Celeste
+            atmosphereColor = Color.valueOf("87ceeb"); // Celeste cielo (Sky Blue)
+            atmosphereRadIn = 0.02f;
+            atmosphereRadOut = 0.35f; // Una atmósfera un poco gruesa para que luzca bien
             
-            // Visuales
-            meshLoader = () -> new HexMesh(this, 5);
-            atmosphereColor = Color.valueOf("32a852"); 
-            iconColor = Color.valueOf("32a852");
-            
-            // Configuración de campaña
+            // ICONO Y UI
+            iconColor = Color.valueOf("808080"); 
+            landCloudColor = Color.valueOf("87ceeb").a(0.4f);
+
             startSector = 15;
             alwaysUnlocked = true;
-            accessible = true; // Añadido para que puedas clickearlo
+            accessible = true;
             
-            // Reglas
             ruleSetter = rule -> {
                 rule.waveTeam = Team.crux;
-                rule.lighting = true; 
+                rule.lighting = true;
             };
         }};
     }
