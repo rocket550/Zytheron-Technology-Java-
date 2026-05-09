@@ -1,4 +1,4 @@
-package zytheron.content;
+package planets;
 
 import arc.func.*;
 import arc.graphics.*;
