@@ -25,7 +25,7 @@ public class ZytheronUnits {
             squareShape = true;
             omniMovement = false;
             rotateMoveFirst = true;
-            rotateSpeed = 3.6,
+            rotateSpeed = 3.6;
             drownTimeMultiplier = 1.2;
             /*treadRects [
             {
