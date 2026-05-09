@@ -28,6 +28,7 @@ public class ZytheronTechnology extends Mod{
     public void loadContent(){
         //and the load
         ZytheronUnits.load();
+        ZytheronPlanet.load();
     }
 
 }
