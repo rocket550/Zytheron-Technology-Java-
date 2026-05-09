@@ -25,8 +25,8 @@ public class ZytheronUnits {
             squareShape = true;
             omniMovement = false;
             rotateMoveFirst = true;
-            rotateSpeed = 3.6;
-            drownTimeMultiplier = 1.2;
+            rotateSpeed = 3.6f;
+            drownTimeMultiplier = 1.2f;
             /*treadRects [
             {
                 x = 7;
@@ -45,10 +45,10 @@ public class ZytheronUnits {
                     top = false;
                     mirror = false;
                     rotate = true;
-                    rotateSpeed = 4.2;
-                    recoil = 1.2;
+                    rotateSpeed = 4.2f;
+                    recoil = 1.2f;
                     shake = 1;
-                    layerOffset = 0.0001;
+                    layerOffset = 0.0001f;
                     bullet = new LightningBulletType() {{
                         collides = true;
                         collidesAir = true;
@@ -78,8 +78,8 @@ public class ZytheronUnits {
             squareShape = true;
             omniMovement = false;
             rotateMoveFirst = true;
-            rotateSpeed = 2.6;
-            drownTimeMultiplier = 1.8;
+            rotateSpeed = 2.6f;
+            drownTimeMultiplier = 1.8f;
             weapons.add(
                 new Weapon("zytheron-voltage-turret") {{
                     reload = 60f;
