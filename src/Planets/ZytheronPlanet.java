@@ -26,7 +26,7 @@ public class ZytheronPlanet {
         zytheron = new Planet("zytheron", Planets.sun, 1f, 3) {{
             
             // Generador (Asegúrate de que la clase ZytheronGenerator exista)
-            generator = new ZytheronGenerator();
+            generator = new SerpuloPlanetGenerator();
             
             // Visuales
             meshLoader = () -> new HexMesh(this, 5);
