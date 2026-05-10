@@ -11,7 +11,6 @@ import mindustry.content.*;
 
 public class ZytheronGenerator extends PlanetGenerator {
     
-    @Override
     public Color getColor(Vec3 position) {
         // Usamos una semilla fija (1) o 'seed' si el compilador la reconoce
         float noise = Simplex.noise3d(1, 7, 0.5, 1/22.0, position.x, position.y, position.z);
@@ -21,13 +20,11 @@ public class ZytheronGenerator extends PlanetGenerator {
         return Color.valueOf("808080");                   // Piedra
     }
 
-    @Override
     public float getHeight(Vec3 position) {
         float noise = Simplex.noise3d(1, 7, 0.5, 1/22.0, position.x, position.y, position.z);
         return Math.max(0, noise); 
     }
 
-    @Override
     public void generateSector(Sector sector) {
         // Necesario para que compile
     }
