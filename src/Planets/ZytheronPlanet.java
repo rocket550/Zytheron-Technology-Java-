@@ -14,31 +14,21 @@ public class ZytheronPlanet {
         zytheron = new Planet("zytheron", Planets.sun, 1f, 3) {{
             generator = new ZytheronGenerator();
             
-            // MESH: Aquí definimos el aspecto visual desde el espacio
             meshLoader = () -> new MultiMesh(
-                // Capa 1: El cuerpo del planeta (Piedra y Arena)
+                // Capa 1: Tierra (Piedra y Arena)
                 new NoiseMesh(this, 15, 6, 1f, 3, 0.5f, 0.4f, 15f, 
-                    Color.valueOf("808080"), // Gris piedra
-                    Color.valueOf("f7e09a"), // Arena claro
-                    4, 0.5f, 0.4f, 0.5f),
+                    Color.valueOf("808080"), Color.valueOf("f7e09a"), 4, 0.5f, 0.4f, 0.5f),
                 
-                // Capa 2: Los océanos (Un poco más pequeños para que la tierra sobresalga)
-                // Usamos una esfera azul semi-transparente o un HexMesh azulado
-                new HexMesh(this, 5) {{
-                    color1 = Color.valueOf("2b60de").a(0.8f); // Azul océano
-                    color2 = Color.valueOf("1e419b").a(0.8f);
-                }}
+                // Capa 2: Océano (Una esfera azul apenas más pequeña para que se vea el relieve)
+                new NoiseMesh(this, 1, 1, 0.99f, 0, 0f, 0f, 0f, 
+                    Color.valueOf("2b60de").a(0.8f), Color.valueOf("1e419b").a(0.8f), 2, 0.5f, 0.4f, 0.5f)
             );
 
-            // ATMÓSFERA: Celeste
-            atmosphereColor = Color.valueOf("87ceeb"); // Celeste cielo (Sky Blue)
+            atmosphereColor = Color.valueOf("87ceeb"); 
             atmosphereRadIn = 0.02f;
-            atmosphereRadOut = 0.35f; // Una atmósfera un poco gruesa para que luzca bien
+            atmosphereRadOut = 0.35f;
             
-            // ICONO Y UI
             iconColor = Color.valueOf("808080"); 
-            landCloudColor = Color.valueOf("87ceeb").a(0.4f);
-
             startSector = 15;
             alwaysUnlocked = true;
             accessible = true;
