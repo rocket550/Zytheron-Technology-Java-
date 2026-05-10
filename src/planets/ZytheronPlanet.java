@@ -12,7 +12,7 @@ public class ZytheronPlanet {
 
     public static void load() {
         zytheron = new Planet("zytheron", Planets.sun, 1f, 3) {{
-            generator = new ZytheronGenerator();
+            ZytheronGenerator generator = new ZytheronGenerator();
             
             meshLoader = () -> new MultiMesh(
                 // Capa de tierra: Piedra y Arena
