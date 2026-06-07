@@ -5,14 +5,13 @@ import mindustry.type.*;
 import mindustry.graphics.g3d.*;
 import mindustry.content.*;
 import mindustry.game.*;
-import mindustry.maps.planet.*;
 
 public class ZytheronPlanet {
     public static Planet zytheron;
 
     public static void load() {
         zytheron = new Planet("zytheron", Planets.sun, 1f, 3) {{
-            ZytheronGenerator generator = new ZytheronGenerator();
+            generator = new ZytheronGenerator();
             
             meshLoader = () -> new MultiMesh(
                 // Capa de tierra: Piedra y Arena

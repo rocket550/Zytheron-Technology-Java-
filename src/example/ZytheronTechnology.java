@@ -2,12 +2,10 @@ package example;
 
 import arc.Core;
 import arc.Events;
-import arc.util.Log;
 import arc.util.Time;
 import mindustry.game.EventType.ClientLoadEvent;
 import mindustry.mod.Mod;
 import mindustry.ui.dialogs.BaseDialog;
-//melis: Troket, you forget the imports
 import content.units.ZytheronUnits;
 import planets.ZytheronPlanet;
 
