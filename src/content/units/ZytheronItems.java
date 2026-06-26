@@ -12,7 +12,7 @@ public static Item ZTcoal, ZTcoal2;
             charge = 0.0f;
             flammability = 1f;
             radioactivity = 0.0f;
-            color = SLPal.starOrangeColor;
+            //color = SLPal.starOrangeColor;
         }};
         ZTcoal2 = new Item("ZTcoal2"){{
             alwaysUnlocked = true;
