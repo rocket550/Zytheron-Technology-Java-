@@ -1,4 +1,4 @@
-package content.units;
+package content;
 
 import mindustry.type.Item;
 
