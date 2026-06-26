@@ -1,4 +1,4 @@
-package content.units;
+package content;
 
 import arc.graphics.Color;
 import mindustry.gen.*;
