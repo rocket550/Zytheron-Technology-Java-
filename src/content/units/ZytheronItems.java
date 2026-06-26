@@ -21,5 +21,47 @@ public static Item ZTcoal, ZTcoal2;
             flammability = 0.2f;
             radioactivity = 0.0f;
         }};
+        Green-ore = new Item("Green-ore"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        Green = new Item("Green"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        Red-ore = new Item("Red-ore"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        Red = new Item("Red"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        Blue-ore = new Item("Blue-ore"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0.5f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        Blue = new Item("Blue"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0.8f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
     }
 }
