@@ -3,7 +3,7 @@ package content.units;
 import mindustry.type.Item;
 
 public class ZytheronItems {
-public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue,  ;
+public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue;
 
     public static void load(){
         ZTcoal = new Item("ZTcoal"){{
@@ -21,7 +21,7 @@ public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue,
             flammability = 0.2f;
             radioactivity = 0.0f;
         }};
-        RedOre = new Item("Red-ore"){{
+        RedOre = new Item("RedOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0f;
@@ -35,7 +35,7 @@ public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue,
             flammability = 0f;
             radioactivity = 0f;
         }};
-        GreenOre = new Item("Green-ore"){{
+        GreenOre = new Item("GreenOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0f;
@@ -49,7 +49,7 @@ public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue,
             flammability = 0f;
             radioactivity = 0f;
         }};
-        BlueOre = new Item("Blue-ore"){{
+        BlueOre = new Item("BlueOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0.5f;
