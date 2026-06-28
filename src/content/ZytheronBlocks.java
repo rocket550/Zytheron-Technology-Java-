@@ -28,6 +28,7 @@ import mindustry.world.meta.*;
 
 public class ZytheronBlocks {
     public static Block
+    greenConveyor,
     //liqsilvfac,silvingfac,starfac,
     //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
     //silvOre,
@@ -39,12 +40,12 @@ public class ZytheronBlocks {
         //Item transportation
 
         greenConveyor = new Conveyor("greenConveyor"){{
-            requirements(Category.distribution, with(ZytheronItems.green, 1));
+            requirements(Category.distribution, with(ZytheronItems.Green, 1));
             health = 40;
             speed = 0.035f;
             displayedSpeed = 100000f;
             buildCostMultiplier = 2f;
-            researchCost = with(ZytheronItems.green, 10));
+            researchCost = with(ZytheronItems.Green, 10));
         }};
 
         
