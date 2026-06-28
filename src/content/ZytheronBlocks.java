@@ -45,7 +45,7 @@ public class ZytheronBlocks {
             speed = 0.035f;
             displayedSpeed = 100000f;
             buildCostMultiplier = 2f;
-            researchCost = with(ZytheronItems.Green, 10));
+            researchCost = with(ZytheronItems.Green, 10);
         }};
 
         
