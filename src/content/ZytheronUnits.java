@@ -17,7 +17,7 @@ public class ZytheronUnits {
         electron = new UnitType("electron") {{
             constructor = TankUnit::create;
             researchCostMultiplier = 0.5f;
-            speed = 0.8f;
+            speed = 1.8f;
             hitSize = 8f;
             health = 190;
             armor = 3;
@@ -71,7 +71,7 @@ public class ZytheronUnits {
         voltage = new UnitType("voltage") {{
             constructor = TankUnit::create;
             researchCostMultiplier = 0.5f;
-            speed = 0.725f;
+            speed = 1.7f;
             hitSize = 12f;
             health = 590;
             armor = 6;
