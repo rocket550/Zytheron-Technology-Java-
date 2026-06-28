@@ -6,6 +6,6 @@
 "description":"This is a java edition of my mod that eventually will replace the json one",
 "subtitle":"Play Silivirium too",
 "minGameVersion":157.4,
-"main":"example.ZytheronTechnology",
+"main":"mod.ZytheronTechnology",
 "java":true
 }
