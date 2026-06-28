@@ -35,6 +35,19 @@ public class ZytheronBlocks {
     //decoy;
     
     public static void load(){
+
+        //Item transportation
+
+        greenConveyor = new Conveyor("greenConveyor"){{
+            requirements(Category.distribution, with(ZytheronItems.green, 1));
+            health = 40;
+            speed = 0.035f;
+            displayedSpeed = 100000f;
+            buildCostMultiplier = 2f;
+            researchCost = with(ZytheronItems.green, 10));
+        }};
+
+        
         //unit factory
         /*
           Its a comment, for now
