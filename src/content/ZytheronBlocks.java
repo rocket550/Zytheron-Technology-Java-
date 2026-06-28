@@ -314,4 +314,4 @@ public class ZytheronBlocks {
             flags = EnumSet.of(BlockFlag.all);
             variants = 3;
         }};*/
-    }}
+    }
