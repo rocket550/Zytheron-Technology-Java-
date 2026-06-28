@@ -8,6 +8,7 @@ import mindustry.entities.part.RegionPart;
 import mindustry.gen.*;
 import mindustry.graphics.Layer;
 import mindustry.world.Block;
+import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.defense.Wall;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.defense.turrets.LiquidTurret;
