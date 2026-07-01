@@ -236,29 +236,27 @@ public class ZytheronBlocks {
                 }}
             );
         }};
-        
-        silvingfac = new GenericCrafter("silvirium-ingot-factory"){{
+        */
+        stoneficator = new GenericCrafter("stoneficator"){{
             alwaysUnlocked = true;
             requirements(Category.crafting, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 100),
-                new ItemStack(Items.metaglass, 10),
-                new ItemStack(Items.silicon, 50),
+                new ItemStack(ZytheronItems.Green, 45),
             });
             size = 2;
-            hasPower = true;
+            hasPower = false;
             hasItems = true;
             rotate = false;
             solid = true;
             envEnabled = Env.any;
-            itemCapacity = 16;
-            craftTime = 600;
+            itemCapacity = 10;
+            craftTime = 120;
 
-            consumePower(0.5f);
-            consumeItem(SLItems.silvirium,4);
-            outputItem = new ItemStack(SLItems.silviriumIng, 1);
+            //consumePower(0.5f);
+            consumeItem(ZytheronItems.ZTcoal,2);
+            outputItem = new ItemStack(ZytheronItems.ZTcoal2, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
         }};
-        
+         /*
         starfac = new GenericCrafter("star-factory"){{
             alwaysUnlocked = true;
             requirements(Category.crafting, new ItemStack[]{
@@ -279,20 +277,39 @@ public class ZytheronBlocks {
             outputItem = new ItemStack(SLItems.starFrag, 1);
         }};*/
         //ore
-      /*
-        silvOre = new OreBlock("ore-silvirium", SLItems.silvirium){{
+     
+        greenOre = new OreBlock("greenOre", ZytheronItems.Green){{
             alwaysUnlocked = true;
-            status = SLStatusEffects.disrupted;
-            statusDuration = 300f;
-            speedMultiplier = 0.6f;
             oreDefault = true;
             oreScale = 9f;
             oreThreshold = 0.7f;
-            emitLight = true;
-            lightRadius = 12f;
-            lightColor = SLPal.silviriumColor;
-            variants = 2;
-        }};*/
+            //emitLight = true;
+            //lightRadius = 12f;
+            //lightColor = SLPal.silviriumColor;
+            variants = 4;
+        }};
+
+        blackOre = new OreBlock("blackOre", ZytheronItems.ZTcoal){{
+            alwaysUnlocked = true;
+            oreDefault = true;
+            oreScale = 11f;
+            oreThreshold = 0.8f;
+            //emitLight = true;
+            //lightRadius = 12f;
+            //lightColor = SLPal.silviriumColor;
+            variants = 4;
+        }};
+
+        redOre = new OreBlock("redOre", ZytheronItems.redOre){{
+            alwaysUnlocked = true;
+            oreDefault = true;
+            oreScale = 8f;
+            oreThreshold = 0.86;
+            //emitLight = true;
+            //lightRadius = 12f;
+            //lightColor = SLPal.silviriumColor;
+            variants = 4;
+        }};
         //turrets
            
         bullet = new ItemTurret("bullet"){{
