@@ -30,8 +30,8 @@ public class ZytheronTechnology extends Mod{
         //and the load
         ZytheronUnits.load();
         ZytheronItems.load();
+        ZytheronItems.load();
         ZytheronPlanet.load();
-        ZytheronBlocks.load();  
     }
 
 }
