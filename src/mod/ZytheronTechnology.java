@@ -32,7 +32,6 @@ public class ZytheronTechnology extends Mod{
         ZytheronItems.load();
         ZytheronBlocks.load();
         ZytheronPlanet.load();
-        //-melis:":("
     }
 
 }
