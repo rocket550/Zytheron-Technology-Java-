@@ -43,9 +43,9 @@ import static mindustry.type.ItemStack.*;
 public class ZytheronBlocks {
     public static Block
     greenConveyor,
-    //liqsilvfac,silvingfac,starfac,
+    stoneficator,
     //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
-    //silvOre,
+    greenOre, redOre, blackOre,
     bullet;
     //decoy;
     
@@ -304,7 +304,7 @@ public class ZytheronBlocks {
             alwaysUnlocked = true;
             oreDefault = true;
             oreScale = 8f;
-            oreThreshold = 0.86;
+            oreThreshold = 0.86f;
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
