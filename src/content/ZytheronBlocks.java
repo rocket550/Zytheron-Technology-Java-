@@ -54,7 +54,7 @@ public class ZytheronBlocks {
         //Item transportation
 
         greenConveyor = new Conveyor("greenConveyor"){{
-            requirements(Category.distribution, with(ZytheronItems.Green, 1));
+            requirements(Category.distribution, with(ZytheronItems.green, 1));
             health = 40;
             speed = 0.035f;
             displayedSpeed = 100000f;
@@ -240,7 +240,7 @@ public class ZytheronBlocks {
         stoneficator = new GenericCrafter("stoneficator"){{
             alwaysUnlocked = true;
             requirements(Category.crafting, new ItemStack[]{
-                new ItemStack(ZytheronItems.Green, 45),
+                new ItemStack(ZytheronItems.green, 45),
             });
             size = 2;
             hasPower = false;
@@ -252,8 +252,8 @@ public class ZytheronBlocks {
             craftTime = 120;
 
             //consumePower(0.5f);
-            consumeItem(ZytheronItems.ZTcoal,2);
-            outputItem = new ItemStack(ZytheronItems.ZTcoal2, 1);
+            consumeItem(ZytheronItems.blackOre,2);
+            outputItem = new ItemStack(ZytheronItems.black, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
         }};
          /*
@@ -278,7 +278,7 @@ public class ZytheronBlocks {
         }};*/
         //ore
      
-        greenOre = new OreBlock("greenOre", ZytheronItems.Green){{
+        greenOre = new OreBlock("greenOre", ZytheronItems.green){{
             alwaysUnlocked = true;
             oreDefault = true;
             oreScale = 9f;
@@ -289,7 +289,7 @@ public class ZytheronBlocks {
             variants = 4;
         }};
 
-        blackOre = new OreBlock("blackOre", ZytheronItems.ZTcoal){{
+        blackOre = new OreBlock("blackOre", ZytheronItems.blackOre){{
             alwaysUnlocked = true;
             oreDefault = true;
             oreScale = 11f;
@@ -315,10 +315,10 @@ public class ZytheronBlocks {
         bullet = new ItemTurret("bullet"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.Green, 15),
+                new ItemStack(ZytheronItems.green, 15),
             });
             ammoTypes.putAll(
-            ZytheronItems.Green, new BasicBulletType(2f,11f){{
+            ZytheronItems.green, new BasicBulletType(2f,11f){{
                 lifetime = 51;
                 width = 6;
                 height = 10;
