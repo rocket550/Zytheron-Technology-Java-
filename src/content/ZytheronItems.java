@@ -3,10 +3,10 @@ package content;
 import mindustry.type.Item;
 
 public class ZytheronItems {
-public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue;
+public static Item blackOre, black, redOre, red, greenOre, green, blueOre, blue;
 
     public static void load(){
-        ZTcoal = new Item("ZTcoal"){{
+        blackOre = new Item("blackOre"){{
             alwaysUnlocked = true;
             explosiveness = 0.2f;
             charge = 0.0f;
@@ -14,49 +14,49 @@ public static Item ZTcoal, ZTcoal2, RedOre, Red, GreenOre, Green, BlueOre, Blue;
             radioactivity = 0.0f;
             //color = SLPal.starOrangeColor;
         }};
-        ZTcoal2 = new Item("ZTcoal2"){{
+        black = new Item("black"){{
             alwaysUnlocked = true;
             explosiveness = 0.1f;
             charge = 0.0f;
             flammability = 0.2f;
             radioactivity = 0.0f;
         }};
-        RedOre = new Item("RedOre"){{
+        redOre = new Item("redOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
         }};
-        Red = new Item("Red"){{
+        red = new Item("red"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
         }};
-        GreenOre = new Item("GreenOre"){{
+        greenOre = new Item("greenOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
         }};
-        Green = new Item("Green"){{
+        green = new Item("green"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
         }};
-        BlueOre = new Item("BlueOre"){{
+        blueOre = new Item("blueOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0.5f;
             flammability = 0f;
             radioactivity = 0f;
         }};
-        Blue = new Item("Blue"){{
+        blue = new Item("blue"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0.8f;
