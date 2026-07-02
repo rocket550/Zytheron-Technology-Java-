@@ -310,6 +310,27 @@ public class ZytheronBlocks {
             //lightColor = SLPal.silviriumColor;
             variants = 4;
         }};
+
+        //drills
+
+        pelletDrill = new Drill("pelletDrill"){{
+            requirements(Category.production, with(Items.copper, 18, Items.graphite, 10));
+            tier = 1;
+            drillTime = 1300;
+            size = 1;
+            consumeLiquid(Liquids.water, 1f / 60f).boost();
+        }};
+
+        boulderDrill = new Drill("boulderDrill"){{
+            requirements(Category.production, with(Items.copper, 18, Items.graphite, 10));
+            tier = 2;
+            drillTime = 300;
+            size = 1;
+            consumeLiquid(Liquids.water, 3f / 60f).boost();
+        }};
+
+
+        
         //turrets
            
         bullet = new ItemTurret("bullet"){{
