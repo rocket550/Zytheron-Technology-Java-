@@ -55,11 +55,57 @@ public class ZytheronBlocks {
 
         greenConveyor = new Conveyor("greenConveyor"){{
             requirements(Category.distribution, with(ZytheronItems.green, 1));
-            health = 40;
+            health = 60;
             speed = 0.035f;
             displayedSpeed = 100000f;
             buildCostMultiplier = 2f;
             //researchCost = with(ZytheronItems.Green, 10);
+        }};
+
+        basicJunction = new Junction("basicJunction"){{
+            requirements(Category.distribution, with(ZytheronItems.green, 4));
+            speed = 26;
+            capacity = 6;
+            health = 60;
+            buildCostMultiplier = 6f;
+        }};
+
+        basicRouter = new Router("basicRouter"){{
+            requirements(Category.distribution, with(ZytheronItems.green, 2));
+            health = 60;
+            buildCostMultiplier = 4f;
+        }};
+
+        basicSorter = new Sorter("basicSorter"){{
+            requirements(Category.distribution, with(ZytheronItems.black, 2, ZytheronItems.green, 2));
+            health = 60;
+            buildCostMultiplier = 3f;
+        }};
+
+        basicInvertedSorter = new Sorter("basicInvertedSorter"){{
+            requirements(Category.distribution, with(ZytheronItems.black, 2, ZytheronItems.green, 2));
+            health = 60;
+            buildCostMultiplier = 3f;
+            invert = true;
+        }};
+
+        /*basicDistributor = new Router("distributor"){{
+            requirements(Category.distribution, with(Items.lead, 4, Items.copper, 4));
+            buildCostMultiplier = 3f;
+            size = 2;
+        }};*/
+
+        basicOverflowGate = new OverflowGate("basicOverflowGate"){{
+            requirements(Category.distribution, with(ZytheronItems.black, 3, ZytheronItems.green, 3));
+            health = 60;
+            buildCostMultiplier = 3f;
+        }};
+
+        basicUnderflowGate = new OverflowGate("basicUnderflowGate"){{
+            requirements(Category.distribution, with(ZytheronItems.black, 3, ZytheronItems.green, 3));
+            health = 60;
+            buildCostMultiplier = 3f;
+            invert = true;
         }};
 
         
