@@ -42,11 +42,12 @@ import static mindustry.type.ItemStack.*;
 
 public class ZytheronBlocks {
     public static Block
-    greenConveyor,
+    greenConveyor, basicJunction, basicRouter, basicSorter, basicInvertedSorter, basicOverflowGate, basicUnderflowGate,
     stoneficator,
     //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
     greenOre, redOre, blackOre,
-    bullet;
+    bullet,
+    pelletDrill, boulderDrill;
     //decoy;
     
     public static void load(){
@@ -360,19 +361,19 @@ public class ZytheronBlocks {
         //drills
 
         pelletDrill = new Drill("pelletDrill"){{
-            requirements(Category.production, with(Items.copper, 18, Items.graphite, 10));
+            requirements(Category.production, with(ZytheronItems.green, 8);
             tier = 1;
             drillTime = 1300;
             size = 1;
-            consumeLiquid(Liquids.water, 1f / 60f).boost();
+            //consumeLiquid(Liquids.water, 1f / 60f).boost();
         }};
 
         boulderDrill = new Drill("boulderDrill"){{
-            requirements(Category.production, with(Items.copper, 18, Items.graphite, 10));
+            requirements(Category.production, with(ZytheronItems.black, 12, ZytheronItems.green, 20));
             tier = 2;
             drillTime = 300;
             size = 1;
-            consumeLiquid(Liquids.water, 3f / 60f).boost();
+            //consumeLiquid(Liquids.water, 3f / 60f).boost();
         }};
 
 
