@@ -78,13 +78,13 @@ public class ZytheronBlocks {
         }};
 
         basicSorter = new Sorter("basicSorter"){{
-            requirements(Category.distribution, with(ZytheronItems.black, 2, ZytheronItems.green, 2));
+            requirements(Category.distribution, with(ZytheronItems.black, 3));
             health = 60;
             buildCostMultiplier = 3f;
         }};
 
         basicInvertedSorter = new Sorter("basicInvertedSorter"){{
-            requirements(Category.distribution, with(ZytheronItems.black, 2, ZytheronItems.green, 2));
+            requirements(Category.distribution, with(ZytheronItems.black, 3));
             health = 60;
             buildCostMultiplier = 3f;
             invert = true;
@@ -372,7 +372,7 @@ public class ZytheronBlocks {
             requirements(Category.production, with(ZytheronItems.black, 12, ZytheronItems.green, 20));
             tier = 2;
             drillTime = 300;
-            size = 1;
+            size = 2;
             //consumeLiquid(Liquids.water, 3f / 60f).boost();
         }};
 
