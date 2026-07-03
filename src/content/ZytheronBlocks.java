@@ -361,7 +361,7 @@ public class ZytheronBlocks {
         //drills
 
         pelletDrill = new Drill("pelletDrill"){{
-            requirements(Category.production, with(ZytheronItems.green, 8);
+            requirements(Category.production, with(ZytheronItems.green, 8));
             tier = 1;
             drillTime = 1300;
             size = 1;
