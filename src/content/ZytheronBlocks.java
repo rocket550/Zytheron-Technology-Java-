@@ -299,7 +299,7 @@ public class ZytheronBlocks {
             craftTime = 120;
 
             //consumePower(0.5f);
-            consumeItem(ZytheronItems.blackOre,2);
+            consumeItem(ZytheronItems.ignition,2);
             outputItem = new ItemStack(ZytheronItems.black, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
         }};
