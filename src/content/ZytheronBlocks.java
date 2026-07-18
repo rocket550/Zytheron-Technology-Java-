@@ -468,10 +468,10 @@ public class ZytheronBlocks {
                     pierce = true;
                     collidesAir = false;
                     statusDuration = 60f * 4;
-                    shootEffect = Fx.shootSmallFlame;
-                    hitEffect = Fx.hitFlameSmall;
-                    despawnEffect = Fx.none;
-                    status = StatusEffects.burning;
+                    //shootEffect = Fx.shootSmallFlame;
+                    //hitEffect = Fx.hitFlameSmall;
+                    //despawnEffect = Fx.none;
+                    //status = StatusEffects.burning;//For some reason, these things dont work
                     hittable = false;
                 }});
             size = 1;
