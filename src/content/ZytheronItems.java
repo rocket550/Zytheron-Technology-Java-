@@ -3,7 +3,7 @@ package content;
 import mindustry.type.Item;
 
 public class ZytheronItems {
-public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue, transistor, processor;
+public static Item ignition, black, redOre, red, green, blueOre, blue, transistor, processor;
 
     public static void load(){
 
@@ -13,7 +13,7 @@ public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue,
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
-            hardness = 1.2f;
+            hardness = 1;
             color = ZytheronColors.greenColor;
         }};
 
@@ -24,7 +24,7 @@ public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue,
             charge = 0.0f;
             flammability = 1f;
             radioactivity = 0.0f;
-            hardness = 2.1f;
+            hardness = 2;
             //
         }};
         black = new Item("black"){{

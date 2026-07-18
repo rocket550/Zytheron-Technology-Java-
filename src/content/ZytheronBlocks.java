@@ -48,7 +48,7 @@ public class ZytheronBlocks {
     stoneficator,
     //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
     greenOre, redOre, ignitionOre,
-    bullet,
+    bullet, trocket, candle,
     pelletDrill, boulderDrill,
     greenWall, largeGreenWall;
     
@@ -398,7 +398,7 @@ public class ZytheronBlocks {
                 //pierceCap = 2;
                 frontColor = ZytheronColors.greenColor;
                 backColor = ZytheronColors.greenColorDark;
-                status = SLStatusEffects.disrupted;
+                //status = SLStatusEffects.disrupted;
                 trailColor  = ZytheronColors.greenColorDark;
                 trailLength = 6;
                 //statusDuration = 300;
