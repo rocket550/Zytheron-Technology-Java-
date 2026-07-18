@@ -47,8 +47,8 @@ public class ZytheronBlocks {
     //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
     greenOre, redOre, ignitionOre,
     bullet,
-    pelletDrill, boulderDrill;
-    //decoy;
+    pelletDrill, boulderDrill,
+    greenWall, largeGreenWall;
     
     public static void load(){
 
