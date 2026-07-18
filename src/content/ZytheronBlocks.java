@@ -45,7 +45,7 @@ public class ZytheronBlocks {
     greenConveyor, basicJunction, basicRouter, basicSorter, basicInvertedSorter, basicOverflowGate, basicUnderflowGate,
     stoneficator,
     //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
-    greenOre, redOre, blackOre,
+    greenOre, redOre, ignition-ore,
     bullet,
     pelletDrill, boulderDrill;
     //decoy;
@@ -336,11 +336,11 @@ public class ZytheronBlocks {
             variants = 4;
         }};
 
-        blackOre = new OreBlock("blackOre", ZytheronItems.blackOre){{
+        ignition-ore = new OreBlock("ignition-ore", ZytheronItems.ignition){{
             alwaysUnlocked = true;
             oreDefault = true;
-            oreScale = 11f;
-            oreThreshold = 0.8f;
+            oreScale = 9;
+            oreThreshold = 0.6f;
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
