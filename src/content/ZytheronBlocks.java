@@ -438,7 +438,7 @@ public class ZytheronBlocks {
                 //trailColor  = ZytheronColors.greenColorDark;
                 //trailLength = 6;
                 //statusDuration = 300;
-                h
+                
             }});
             size = 1;
             recoil = 1f;
@@ -473,7 +473,7 @@ public class ZytheronBlocks {
                     despawnEffect = Fx.none;
                     status = StatusEffects.burning;
                     hittable = false;
-                }},
+                }});
             size = 1;
             recoil = 1f;
             reload = 3.5f;
