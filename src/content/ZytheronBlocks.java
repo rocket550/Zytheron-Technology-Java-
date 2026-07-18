@@ -425,7 +425,7 @@ public class ZytheronBlocks {
             health = 480;
             size = 1;
             //variants = 3;
-        }
+        }};
         largeGreenWall = new Wall("largeGreenWall"){{
             //alwaysUnlocked = true;
             requirements(Category.effect, new ItemStack[]{
