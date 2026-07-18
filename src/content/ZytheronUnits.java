@@ -13,7 +13,64 @@ public class ZytheronUnits {
     public static UnitType electron, voltage;
 
     public static void load() {
-        // region ground attack
+
+        // region ground missile
+        dart = new UnitType("dart") {{
+            constructor = MechUnit::create;
+            researchCostMultiplier = 0.5f;
+            speed = 1.8f;
+            hitSize = 8f;
+            health = 190;
+            armor = 3;
+            itemCapacity = 20;
+            //squareShape = true;
+            //omniMovement = false;
+            //rotateMoveFirst = true;
+            //rotateSpeed = 3.6f;
+            drownTimeMultiplier = 1.2f;
+
+            weapons.add(
+                new Weapon("dart-weapon") {{
+                    reload = 30f;
+                    x = 5f;
+                    y = 0f;
+                    shootX = 0;
+                    shootY = 4;
+                    top = false;
+                    mirror = true;
+                    rotate = false; //false for now
+                    //rotateSpeed = 4.2f;
+                    recoil = 1.2f;
+                    shake = 1;
+                    layerOffset = 0.0001f;
+                    bullet = new MissileBulletType() {{
+                        collides = true;
+                        collidesAir = true;
+                        collidesTiles = true;
+                        pierceCap = 4;
+                        range = 144;
+                        maxRange = 144;
+                        damage = 15;
+                        speed = 5;
+                        lifetime = 29;
+                        //pierce = true;
+                        //pierceCap = 4;
+                        //lightningLength = 21;
+                        //buildingDamageMultiplier = 1;
+                        //shootEffect = Fx.lightningShoot;
+                        //status = StatusEffects.shocked;
+                    }};
+                }}
+            );
+        }};
+
+
+
+
+
+
+
+        // region ground electric
         electron = new UnitType("electron") {{
             constructor = TankUnit::create;
             researchCostMultiplier = 0.5f;
