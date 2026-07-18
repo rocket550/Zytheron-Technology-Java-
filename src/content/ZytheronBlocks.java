@@ -395,9 +395,9 @@ public class ZytheronBlocks {
                 //pierce = pierceBuilding = true;
                 //pierceCap = 2;
                 frontColor = ZytheronColors.greenColor;
-                backColor = ZytheronColors.greenColordark;
+                backColor = ZytheronColors.greenColorDark;
                 //status = SLStatusEffects.disrupted;
-                trailColor  = ZytheronColors.greenColordark;
+                trailColor  = ZytheronColors.greenColorDark;
                 trailLength = 6;
                 //statusDuration = 300;
             }});
