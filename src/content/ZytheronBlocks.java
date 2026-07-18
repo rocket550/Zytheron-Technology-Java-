@@ -383,30 +383,32 @@ public class ZytheronBlocks {
         bullet = new ItemTurret("bullet"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.green, 15),
+                new ItemStack(ZytheronItems.green, 20),
+                new ItemStack(ZytheronItems.black, 20),
             });
             ammoTypes.putAll(
             ZytheronItems.green, new BasicBulletType(2f,11f){{
-                lifetime = 51;
+                lifetime = 25;
+                speed=6;
                 width = 6;
                 height = 10;
                 //pierce = pierceBuilding = true;
                 //pierceCap = 2;
-                /*frontColor = SLPal.silviriumColor;
-                backColor = SLPal.silviriumColor;
-                status = SLStatusEffects.disrupted;
-                trailColor  = SLPal.silviriumColor;
+                frontColor = ZytheronColors.greenColor;
+                backColor = ZytheronColors.greenColordark;
+                //status = SLStatusEffects.disrupted;
+                trailColor  = ZytheronColors.greenColordark;
                 trailLength = 6;
-                statusDuration = 300;*/
+                //statusDuration = 300;
             }});
             size = 1;
             recoil = 1f;
-            reload = 30f;
-            inaccuracy = 0f;
+            reload = 20f;
+            inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 10;
             rotateSpeed = 5f;
-            range = 100f;
+            range = 144;
             health = 240;
             flags = EnumSet.of(BlockFlag.turret);
             //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
@@ -414,17 +416,23 @@ public class ZytheronBlocks {
         }};
         };
         //util
-      /*
-        decoy = new Wall("decoy"){{
-            alwaysUnlocked = true;
+      
+        greenWall = new Wall("greenWall"){{
+            //alwaysUnlocked = true;
             requirements(Category.effect, new ItemStack[]{
-                new ItemStack(Items.silicon, 80),
-                new ItemStack(Items.copper, 50),
-                new ItemStack(Items.graphite, 30)
+                new ItemStack(ZytheronItems.green, 8),
             });
-            health = 100;
-            priority = 8;
-            flags = EnumSet.of(BlockFlag.all);
-            variants = 3;
-        }};*/
+            health = 480;
+            size = 1;
+            //variants = 3;
+        }
+        largeGreenWall = new Wall("largeGreenWall"){{
+            //alwaysUnlocked = true;
+            requirements(Category.effect, new ItemStack[]{
+                new ItemStack(ZytheronItems.green, 32),
+            });
+            health = 1920;
+            size = 2;
+            //variants = 3;
+        }};
     }
