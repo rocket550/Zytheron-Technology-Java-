@@ -414,7 +414,7 @@ public class ZytheronBlocks {
             //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
-        };
+     
         //util
       
         greenWall = new Wall("greenWall"){{
@@ -436,3 +436,4 @@ public class ZytheronBlocks {
             //variants = 3;
         }};
     }
+    };
