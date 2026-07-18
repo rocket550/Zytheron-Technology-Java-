@@ -3,10 +3,10 @@ package content;
 import mindustry.type.Item;
 
 public class ZytheronItems {
-public static Item blackOre, black, redOre, red, greenOre, green, blueOre, blue;
+public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue, transistor, processor;
 
     public static void load(){
-        blackOre = new Item("blackOre"){{
+        ignition = new Item("ignition"){{
             alwaysUnlocked = true;
             explosiveness = 0.2f;
             charge = 0.0f;
@@ -60,6 +60,20 @@ public static Item blackOre, black, redOre, red, greenOre, green, blueOre, blue;
             alwaysUnlocked = true;
             explosiveness = 0f;
             charge = 0.8f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        transistor = new Item("transistor"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+        }};
+        processor = new Item("processor"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
         }};
