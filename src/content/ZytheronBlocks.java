@@ -385,37 +385,109 @@ public class ZytheronBlocks {
         bullet = new ItemTurret("bullet"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.green, 20),
-                new ItemStack(ZytheronItems.black, 20),
+                new ItemStack(ZytheronItems.green, 15),
+                new ItemStack(ZytheronItems.black, 15),
             });
             ammoTypes.putAll(
-            ZytheronItems.green, new BasicBulletType(2f,11f){{
+            ZytheronItems.green, new BasicBulletType(6f,10f){{
                 lifetime = 25;
-                speed=6;
+                //speed=6;
                 width = 6;
                 height = 10;
                 //pierce = pierceBuilding = true;
                 //pierceCap = 2;
                 frontColor = ZytheronColors.greenColor;
                 backColor = ZytheronColors.greenColorDark;
-                //status = SLStatusEffects.disrupted;
+                status = SLStatusEffects.disrupted;
                 trailColor  = ZytheronColors.greenColorDark;
                 trailLength = 6;
                 //statusDuration = 300;
             }});
             size = 1;
             recoil = 1f;
-            reload = 20f;
+            reload = 20;
             inaccuracy = 4f;
             shootCone = 2f;
-            maxAmmo = 10;
+            maxAmmo = 12;
             rotateSpeed = 5f;
             range = 144;
-            health = 240;
+            health = 300;
             flags = EnumSet.of(BlockFlag.turret);
             //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
+
+        trocket = new ItemTurret("trocket"){{
+            alwaysUnlocked = true;
+            requirements(Category.turret, new ItemStack[]{
+                new ItemStack(ZytheronItems.red, 35),
+                new ItemStack(ZytheronItems.black, 20),
+            });
+            ammoTypes.putAll(
+            ZytheronItems.red, new MissileBulletType(3f,25){{
+                ammoMultiplier = 1f;
+                lifetime = 68;
+                //speed=6;
+                width = 10;
+                height = 12;
+                //pierce = pierceBuilding = true;
+                //pierceCap = 2;
+                frontColor = ZytheronColors.redColor;
+                backColor = ZytheronColors.redColorDark;
+                //status = SLStatusEffects.disrupted;
+                //trailColor  = ZytheronColors.greenColorDark;
+                //trailLength = 6;
+                //statusDuration = 300;
+                h
+            }});
+            size = 1;
+            recoil = 1f;
+            reload = 60;
+            inaccuracy = 1f;
+            shootCone = 2f;
+            maxAmmo = 5;
+            rotateSpeed = 4f;
+            range = 200;
+            health = 300;
+            flags = EnumSet.of(BlockFlag.turret);
+            //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
+            //shootEffect = SLFx.silviriumHit1Effect;
+        }};
+
+            candle = new ItemTurret("candle"){{
+            alwaysUnlocked = true;
+            requirements(Category.turret, new ItemStack[]{
+                new ItemStack(ZytheronItems.ignition, 40),
+                new ItemStack(ZytheronItems.black, 15),
+            });
+            ammoTypes.putAll(
+            ZytheronItems.ignition, new BulletType(3.35f, 20f){{
+                    ammoMultiplier = 3f;
+                    hitSize = 7f;
+                    lifetime = 12f;
+                    pierce = true;
+                    collidesAir = false;
+                    statusDuration = 60f * 4;
+                    shootEffect = Fx.shootSmallFlame;
+                    hitEffect = Fx.hitFlameSmall;
+                    despawnEffect = Fx.none;
+                    status = StatusEffects.burning;
+                    hittable = false;
+                }},
+            size = 1;
+            recoil = 1f;
+            reload = 3.5f;
+            inaccuracy = 4f;
+            shootCone = 2f;
+            maxAmmo = 20;
+            rotateSpeed = 5f;
+            range = 40;
+            health = 600;
+            flags = EnumSet.of(BlockFlag.turret);
+            //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
+            //shootEffect = SLFx.silviriumHit1Effect;
+        }};
+     
      
         //util
       

@@ -5,17 +5,13 @@ import arc.graphics.Color;
 public class ZytheronColors {
     public static Color
 
+    //Green
     greenColor = Color.valueOf("00a340"),
     greenColorDark = Color.valueOf("005220");
-    /*/
-    silviriumOtherColor = Color.valueOf("88aaff"),
-    silviriumligthColor = Color.valueOf("cceeff"),
-    silviriumDarkestColor = Color.valueOf("222744"),
-    silviriumMidColor = Color.valueOf("00c096"),
-    silviriumDarkColor = Color.valueOf("06745b"),
-    starOrangeColor = Color.valueOf("FF7733"),
-    starOrangeDarkColor = Color.valueOf("FF5511"),
-    starRedColor = Color.valueOf("FF3300"),
-    starRedDarkColor = Color.valueOf("EE1100");
-    //*/
+
+    //Red
+    redColor = Color.valueOf("fa595c"),
+    redColorDark = Color.valueOf("ed1c24");
+
+
 }

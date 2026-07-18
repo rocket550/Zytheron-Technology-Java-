@@ -6,13 +6,26 @@ public class ZytheronItems {
 public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue, transistor, processor;
 
     public static void load(){
+
+        green = new Item("green"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+            hardness = 1.2f;
+            color = ZytheronColors.greenColor;
+        }};
+
+
         ignition = new Item("ignition"){{
             alwaysUnlocked = true;
             explosiveness = 0.2f;
             charge = 0.0f;
             flammability = 1f;
             radioactivity = 0.0f;
-            //color = SLPal.starOrangeColor;
+            hardness = 2.1f;
+            //
         }};
         black = new Item("black"){{
             alwaysUnlocked = true;
@@ -27,6 +40,8 @@ public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue,
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
+            hardness = 3;
+            color = ZytheronColors.redColorDark;
         }};
         red = new Item("red"){{
             alwaysUnlocked = true;
@@ -34,21 +49,9 @@ public static Item ignition, black, redOre, red, greenOre, green, blueOre, blue,
             charge = 0f;
             flammability = 0f;
             radioactivity = 0f;
+            color = ZytheronColors.redColor;
         }};
-        greenOre = new Item("greenOre"){{
-            alwaysUnlocked = true;
-            explosiveness = 0f;
-            charge = 0f;
-            flammability = 0f;
-            radioactivity = 0f;
-        }};
-        green = new Item("green"){{
-            alwaysUnlocked = true;
-            explosiveness = 0f;
-            charge = 0f;
-            flammability = 0f;
-            radioactivity = 0f;
-        }};
+
         blueOre = new Item("blueOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
