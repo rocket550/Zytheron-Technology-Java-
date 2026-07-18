@@ -23,11 +23,11 @@ public class ZytheronUnits {
         dart = new UnitType("dart") {{
             constructor = MechUnit::create;
             researchCostMultiplier = 0.5f;
-            speed = 1.8f;
+            speed = 0.5f;
             hitSize = 8f;
-            health = 190;
-            armor = 3;
-            itemCapacity = 20;
+            health = 250;
+            armor = 1;
+            itemCapacity = 30;
             //squareShape = true;
             //omniMovement = false;
             //rotateMoveFirst = true;
@@ -35,7 +35,7 @@ public class ZytheronUnits {
             drownTimeMultiplier = 1.2f;
 
             weapons.add(
-                new Weapon("dart-weapon") {{
+                new Weapon("zytheron-dart-weapon") {{
                     reload = 30f;
                     x = 5f;
                     y = 0f;
