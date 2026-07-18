@@ -6,7 +6,7 @@ public class ZytheronColors {
     public static Color
 
     greenColor = Color.valueOf("00a340"),
-    greenColorDark = Color.valueOf("005220"),
+    greenColorDark = Color.valueOf("005220")
     /*silviriumOtherColor = Color.valueOf("88aaff"),
     silviriumligthColor = Color.valueOf("cceeff"),
     silviriumDarkestColor = Color.valueOf("222744"),
