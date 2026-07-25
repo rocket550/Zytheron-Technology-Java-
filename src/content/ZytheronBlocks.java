@@ -405,7 +405,7 @@ public class ZytheronBlocks {
             }});
             size = 1;
             recoil = 1f;
-            reload = 20;
+            reload = 25;
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 12;
@@ -415,6 +415,62 @@ public class ZytheronBlocks {
             flags = EnumSet.of(BlockFlag.turret);
             //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
             //shootEffect = SLFx.silviriumHit1Effect;
+        }};
+
+        dual = new ItemTurret("dual"){{
+            alwaysUnlocked = true;
+            requirements(Category.turret, new ItemStack[]{
+                new ItemStack(ZytheronItems.green, 110),
+                new ItemStack(ZytheronItems.black, 80),
+            });
+            ammoTypes.putAll(
+            ZytheronItems.green, new BasicBulletType(6f,10f){{
+                lifetime = 25;
+                //speed=6;
+                width = 6;
+                height = 10;
+                //pierce = pierceBuilding = true;
+                //pierceCap = 2;
+                frontColor = ZytheronColors.greenColor;
+                backColor = ZytheronColors.greenColorDark;
+                //status = SLStatusEffects.disrupted;
+                trailColor  = ZytheronColors.greenColorDark;
+                trailLength = 6;
+                //statusDuration = 300;
+            }});
+            size = 2;
+            recoil = 1f;
+            reload = 10;
+            inaccuracy = 4f;
+            shootCone = 2f;
+            maxAmmo = 25;
+            rotateSpeed = 4f;
+            range = 200;
+            health = 1000;
+            flags = EnumSet.of(BlockFlag.turret);
+            //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
+            //shootEffect = SLFx.silviriumHit1Effect;
+
+            shoot = new ShootBarrel(){{
+                barrels = new float[]{
+                1.5f, 0f, 0f,
+                -1.5f, 0f, 0f,
+                };
+            }};
+
+            recoils = 3;
+            drawer = new DrawTurret(){{
+                for(int i = 2; i > 0; i--){
+                    int f = i;
+                    parts.add(new RegionPart("-barrel-" + i){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f - 1;
+                        under = true;
+                        moveY = -2f;
+                    }});
+                }
+            }};
+
         }};
 
         trocket = new ItemTurret("trocket"){{
@@ -438,6 +494,14 @@ public class ZytheronBlocks {
                 //trailColor  = ZytheronColors.greenColorDark;
                 //trailLength = 6;
                 //statusDuration = 300;
+
+                //Wave
+                weaveScale = 4;
+                weaveMag = 4;
+
+                //Homing
+                homingPower = 0.05f;
+                homingRange = 80f;
                 
             }});
             size = 1;
