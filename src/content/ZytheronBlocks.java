@@ -51,7 +51,7 @@ public class ZytheronBlocks {
     greenConveyor, basicJunction, basicRouter, basicSorter, basicInvertedSorter, basicOverflowGate, basicUnderflowGate,
     
     //Factory
-    stoneficator,
+    stoneficator, redfactory,
 
     //Ore
     greenOre, redOre, ignitionOre,
@@ -65,7 +65,8 @@ public class ZytheronBlocks {
     pelletDrill, boulderDrill,
 
     //Wall
-    greenWall, largeGreenWall;
+    greenWall, largeGreenWall,//Green
+    redWall, largeRedWall;//Red
     
     public static void load(){
 
@@ -320,6 +321,27 @@ public class ZytheronBlocks {
             outputItem = new ItemStack(ZytheronItems.black, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
         }};
+
+        redfactory = new GenericCrafter("redfactory"){{
+            alwaysUnlocked = true;
+            requirements(Category.crafting, new ItemStack[]{
+                new ItemStack(ZytheronItems.green, 90),
+                new ItemStack(ZytheronItems.black, 60),
+            });
+            size = 2;
+            hasPower = true;
+            hasItems = true;
+            rotate = false;
+            solid = true;
+            envEnabled = Env.any;
+            itemCapacity = 10;
+            craftTime = 120;
+
+            consumePower(1f);
+            consumeItem(ZytheronItems.redOre,2);
+            outputItem = new ItemStack(ZytheronItems.red, 1);
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.redColor));
+        }};
          /*
         starfac = new GenericCrafter("star-factory"){{
             alwaysUnlocked = true;
@@ -499,8 +521,8 @@ public class ZytheronBlocks {
                 ammoMultiplier = 1f;
                 lifetime = 68;
                 //speed=6;
-                width = 10;
-                height = 12;
+                width = 9;
+                height = 10;
                 //pierce = pierceBuilding = true;
                 //pierceCap = 2;
                 frontColor = ZytheronColors.redColor;
@@ -554,8 +576,8 @@ public class ZytheronBlocks {
                     hittable = false;
                 }});
             size = 1;
-            //recoil = 1f;
-            reload = 3.5f;
+            recoil = 0f;
+            reload = 3.6f;
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 20;
@@ -585,6 +607,25 @@ public class ZytheronBlocks {
                 new ItemStack(ZytheronItems.green, 32),
             });
             health = 1920;
+            size = 2;
+            //variants = 3;
+        }};
+
+        redWall = new Wall("redWall"){{
+            //alwaysUnlocked = true;
+            requirements(Category.effect, new ItemStack[]{
+                new ItemStack(ZytheronItems.red, 8),
+            });
+            health = 600;
+            size = 1;
+            //variants = 3;
+        }};
+        largeRedWall = new Wall("largeRedWall"){{
+            //alwaysUnlocked = true;
+            requirements(Category.effect, new ItemStack[]{
+                new ItemStack(ZytheronItems.red, 32),
+            });
+            health = 2400;
             size = 2;
             //variants = 3;
         }};
