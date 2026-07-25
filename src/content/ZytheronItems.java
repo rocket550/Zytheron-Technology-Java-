@@ -25,8 +25,9 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             flammability = 1f;
             radioactivity = 0.0f;
             hardness = 2;
-            //
         }};
+
+
         black = new Item("black"){{
             alwaysUnlocked = true;
             explosiveness = 0.1f;
@@ -34,6 +35,8 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             flammability = 0.2f;
             radioactivity = 0.0f;
         }};
+
+
         redOre = new Item("redOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
@@ -43,6 +46,8 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             hardness = 3;
             color = ZytheronColors.redColorDark;
         }};
+
+
         red = new Item("red"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
@@ -52,6 +57,7 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             color = ZytheronColors.redColor;
         }};
 
+
         blueOre = new Item("blueOre"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
@@ -59,6 +65,8 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             flammability = 0f;
             radioactivity = 0f;
         }};
+
+
         blue = new Item("blue"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
@@ -66,6 +74,8 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             flammability = 0f;
             radioactivity = 0f;
         }};
+
+
         transistor = new Item("transistor"){{
             alwaysUnlocked = true;
             explosiveness = 0f;
@@ -73,6 +83,8 @@ public static Item ignition, black, redOre, red, green, blueOre, blue, transisto
             flammability = 0f;
             radioactivity = 0f;
         }};
+
+        
         processor = new Item("processor"){{
             alwaysUnlocked = true;
             explosiveness = 0f;

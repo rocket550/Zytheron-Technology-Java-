@@ -57,8 +57,8 @@ public class ZytheronBlocks {
     greenOre, redOre, ignitionOre,
 
     //Turret
-    bullet,dual,//Green
-    trocket,//Red
+    bullet, dual,//Green
+    trocket, silo,//Red
     candle,//Fire
 
     //Drill
@@ -340,7 +340,7 @@ public class ZytheronBlocks {
             consumePower(1f);
             consumeItem(ZytheronItems.redOre,2);
             outputItem = new ItemStack(ZytheronItems.red, 1);
-            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.redColor));
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.ZytheronColors.redColor));
         }};
          /*
         starfac = new GenericCrafter("star-factory"){{
@@ -495,7 +495,7 @@ public class ZytheronBlocks {
                 };
             }};
 
-            recoils = 3;
+            recoils = 2;
             drawer = new DrawTurret(){{
                 for(int i = 2; i > 0; i--){
                     int f = i;
@@ -517,12 +517,11 @@ public class ZytheronBlocks {
                 new ItemStack(ZytheronItems.black, 20),
             });
             ammoTypes.putAll(
-            ZytheronItems.red, new MissileBulletType(3f,35){{
+            ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 1f;
-                lifetime = 68;
-                //speed=6;
-                width = 9;
-                height = 10;
+                lifetime = 68f;
+                width = 9f;
+                height = 10f;
                 //pierce = pierceBuilding = true;
                 //pierceCap = 2;
                 frontColor = ZytheronColors.redColor;
@@ -553,6 +552,73 @@ public class ZytheronBlocks {
             flags = EnumSet.of(BlockFlag.turret);
             //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
             //shootEffect = SLFx.silviriumHit1Effect;
+        }};
+
+
+        silo = new ItemTurret("silo"){{
+            alwaysUnlocked = true;
+            requirements(Category.turret, new ItemStack[]{
+                new ItemStack(ZytheronItems.red, 160),
+                new ItemStack(ZytheronItems.black, 100),
+            });
+            ammoTypes.putAll(
+            ZytheronItems.red, new MissileBulletType(4f,20f){{
+                ammoMultiplier = 1f;
+                lifetime = 60f;
+                width = 9f;
+                height = 10f;
+                //pierce = pierceBuilding = true;
+                //pierceCap = 2;
+                frontColor = ZytheronColors.redColor;
+                backColor = ZytheronColors.redColorDark;
+                //status = SLStatusEffects.disrupted;
+                //trailColor  = ZytheronColors.greenColorDark;
+                //trailLength = 6;
+                //statusDuration = 300;
+
+                //Wave
+                weaveScale = 2;
+                weaveMag = 3;
+
+                //Homing
+                homingPower = 0.05f;
+                homingRange = 80f;
+                
+            }});
+            size = 2;
+            recoil = 1f;
+            reload = 28;
+            inaccuracy = 2f;
+            shootCone = 2f;
+            maxAmmo = 25;
+            rotateSpeed = 3.6f;
+            range = 236.8f;
+            health = 1100;
+            flags = EnumSet.of(BlockFlag.turret);
+            //coolant = consume(new ConsumeLiquid(SLliquids.liquidSilvirium, 0.05f));
+            //shootEffect = SLFx.silviriumHit1Effect;
+
+            shoot = new ShootBarrel(){{
+                barrels = new float[]{
+                0f, 0f, 0f,
+                2.1f, 0f, 0f,
+                -2.1f, 0f, 0f,
+                };
+            }};
+
+            recoils = 2;
+            drawer = new DrawTurret(){{
+                for(int i = 3; i > 0; i--){
+                    int f = i;
+                    parts.add(new RegionPart("-barrel-" + i){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f - 1;
+                        under = true;
+                        moveY = -2f;
+                    }});
+                }
+            }};
+
         }};
 
             candle = new ItemTurret("candle"){{
