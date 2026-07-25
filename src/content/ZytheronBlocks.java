@@ -455,7 +455,7 @@ public class ZytheronBlocks {
             range = 144;
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
-            coolant = ConsumeLiquid(6f / 60);
+            coolant = consumeCoolant(6f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
 
@@ -495,7 +495,7 @@ public class ZytheronBlocks {
             range = 200;
             health = 1000;
             flags = EnumSet.of(BlockFlag.turret);
-            coolant = ConsumeLiquid(16f / 60);
+            coolant = consumeCoolant(16f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
@@ -558,7 +558,7 @@ public class ZytheronBlocks {
             range = 200;
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
-            coolant = ConsumeLiquid(3f / 60);
+            coolant = consumeCoolant(3f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
 
@@ -605,7 +605,7 @@ public class ZytheronBlocks {
             range = 236.8f;
             health = 1100;
             flags = EnumSet.of(BlockFlag.turret);
-            coolant = ConsumeLiquid(14f / 60);
+            coolant = consumeCoolant(14f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
@@ -661,7 +661,7 @@ public class ZytheronBlocks {
             range = 40;
             health = 600;
             flags = EnumSet.of(BlockFlag.turret);
-            coolant = ConsumeLiquid(8f / 60);
+            coolant = consumeCoolant(8f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
      
@@ -696,7 +696,7 @@ public class ZytheronBlocks {
             range = 72;
             health = 1800;
             flags = EnumSet.of(BlockFlag.turret);
-            coolant = ConsumeLiquid(18f / 60);
+            coolant = consumeCoolant(18f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
      
