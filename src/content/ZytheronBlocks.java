@@ -36,6 +36,8 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
+import mindustry.content.Fx;
+import mindustry.content.StatusEffects;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
@@ -44,12 +46,25 @@ import static mindustry.type.ItemStack.*;
 
 public class ZytheronBlocks {
     public static Block
+
+    //Transportation
     greenConveyor, basicJunction, basicRouter, basicSorter, basicInvertedSorter, basicOverflowGate, basicUnderflowGate,
+    
+    //Factory
     stoneficator,
-    //silvFacT1, silvFacT2, silvFacT3, silvFacT4,starFacT1,
+
+    //Ore
     greenOre, redOre, ignitionOre,
-    bullet, trocket, candle,
+
+    //Turret
+    bullet,dual,//Green
+    trocket,//Red
+    candle,//Fire
+
+    //Drill
     pelletDrill, boulderDrill,
+
+    //Wall
     greenWall, largeGreenWall;
     
     public static void load(){
@@ -532,10 +547,10 @@ public class ZytheronBlocks {
                     pierce = true;
                     collidesAir = false;
                     statusDuration = 60f * 4;
-                    //shootEffect = Fx.shootSmallFlame;
-                    //hitEffect = Fx.hitFlameSmall;
-                    //despawnEffect = Fx.none;
-                    //status = StatusEffects.burning;//For some reason, these things dont work
+                    shootEffect = Fx.shootSmallFlame;
+                    hitEffect = Fx.hitFlameSmall;
+                    despawnEffect = Fx.none;
+                    status = StatusEffects.burning;
                     hittable = false;
                 }});
             size = 1;
