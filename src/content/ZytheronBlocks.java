@@ -383,7 +383,7 @@ public class ZytheronBlocks {
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
-            variants = 4;
+            variants = 1;
         }};
 
         redOre = new OreBlock("redOre", ZytheronItems.redOre){{
@@ -394,7 +394,7 @@ public class ZytheronBlocks {
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
-            variants = 4;
+            variants = 1;
         }};
 
         //drills
@@ -600,13 +600,13 @@ public class ZytheronBlocks {
 
             shoot = new ShootBarrel(){{
                 barrels = new float[]{
-                0f, 0f, 0f,
+                0f, 1f, 0f,
                 2.1f, 0f, 0f,
                 -2.1f, 0f, 0f,
                 };
             }};
 
-            recoils = 3;//Melis was here... to fix a thing.
+            recoils = 3;
             drawer = new DrawTurret(){{
                 for(int i = 3; i > 0; i--){
                     int f = i;
