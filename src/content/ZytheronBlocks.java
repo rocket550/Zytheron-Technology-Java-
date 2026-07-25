@@ -606,7 +606,7 @@ public class ZytheronBlocks {
                 };
             }};
 
-            recoils = 2;
+            recoils = 3;//Melis was here... to fix a thing.
             drawer = new DrawTurret(){{
                 for(int i = 3; i > 0; i--){
                     int f = i;
