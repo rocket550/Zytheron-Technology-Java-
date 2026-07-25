@@ -420,7 +420,7 @@ public class ZytheronBlocks {
             }});
             size = 1;
             recoil = 1f;
-            reload = 25;
+            reload = 50;
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 12;
@@ -439,8 +439,8 @@ public class ZytheronBlocks {
                 new ItemStack(ZytheronItems.black, 80),
             });
             ammoTypes.putAll(
-            ZytheronItems.green, new BasicBulletType(6f,10f){{
-                lifetime = 25;
+            ZytheronItems.green, new BasicBulletType(6f,14f){{
+                lifetime = 34;
                 //speed=6;
                 width = 6;
                 height = 10;
@@ -455,7 +455,7 @@ public class ZytheronBlocks {
             }});
             size = 2;
             recoil = 1f;
-            reload = 10;
+            reload = 20;
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 25;
@@ -495,7 +495,7 @@ public class ZytheronBlocks {
                 new ItemStack(ZytheronItems.black, 20),
             });
             ammoTypes.putAll(
-            ZytheronItems.red, new MissileBulletType(3f,25){{
+            ZytheronItems.red, new MissileBulletType(3f,35){{
                 ammoMultiplier = 1f;
                 lifetime = 68;
                 //speed=6;
@@ -511,8 +511,8 @@ public class ZytheronBlocks {
                 //statusDuration = 300;
 
                 //Wave
-                weaveScale = 4;
-                weaveMag = 4;
+                weaveScale = 2;
+                weaveMag = 3;
 
                 //Homing
                 homingPower = 0.05f;
@@ -554,7 +554,7 @@ public class ZytheronBlocks {
                     hittable = false;
                 }});
             size = 1;
-            recoil = 1f;
+            //recoil = 1f;
             reload = 3.5f;
             inaccuracy = 4f;
             shootCone = 2f;
