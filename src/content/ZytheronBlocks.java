@@ -340,7 +340,7 @@ public class ZytheronBlocks {
             consumePower(1f);
             consumeItem(ZytheronItems.redOre,2);
             outputItem = new ItemStack(ZytheronItems.red, 1);
-            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.ZytheronColors.redColor));
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
         }};
          /*
         starfac = new GenericCrafter("star-factory"){{
