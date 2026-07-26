@@ -584,7 +584,7 @@ public class ZytheronBlocks {
 
                 //Area Damage
                 splashDamageRadius = 2f * 8;
-                splashDamage = 45f;
+                splashDamage = 10f;
 
                 //Wave
                 weaveScale = 2;
@@ -657,9 +657,10 @@ public class ZytheronBlocks {
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 20;
-            rotateSpeed = 56;
+            rotateSpeed = 6f;
             range = 40;
             health = 600;
+            targetAir = false;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(8f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
@@ -696,6 +697,7 @@ public class ZytheronBlocks {
             range = 72;
             health = 1800;
             flags = EnumSet.of(BlockFlag.turret);
+            targetAir = false;
             coolant = consumeCoolant(18f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
