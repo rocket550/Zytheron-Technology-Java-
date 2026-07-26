@@ -127,181 +127,7 @@ public class ZytheronBlocks {
             invert = true;
         }};
 
-        
-        //unit factory
-        /*
-          Its a comment, for now
-          silvFacT1 = new UnitFactory("silvirium-molder"){{
-            alwaysUnlocked = true;
-            requirements(Category.units, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.lead, 40),
-                new ItemStack(Items.silicon, 70)
-            });
-            size = 2;
-            health = 220;
-            consumePower(0f);
-            consumeLiquid(SLliquids.liquidSilvirium, 0.5f);
-            plans.addAll(
-                new UnitPlan(
-                    SLUnits.silvirror, 1200,
-                    new ItemStack[]{
-                      new ItemStack(SLItems.silvirium, 30),
-                      new ItemStack(Items.silicon, 20)
-                    }
-                ),
-                new UnitPlan(
-                    SLUnits.silvone, 1200,
-                    new ItemStack[]{
-                      new ItemStack(SLItems.silvirium, 20),
-                      new ItemStack(Items.silicon, 10)
-                    }
-                ),
-                new UnitPlan(
-                    SLUnits.silvioros, 1200,
-                    new ItemStack[]{
-                      new ItemStack(SLItems.silvirium, 20),
-                      new ItemStack(Items.silicon, 10)
-                    }
-                ),
-                new UnitPlan(
-                    SLUnits.silvanon, 900,
-                    new ItemStack[]{
-                        new ItemStack(SLItems.silvirium, 25),
-                        new ItemStack(SLItems.silviriumIng, 10),
-                    }
-                )
-            );
-        }};
-        silvFacT2 = new Reconstructor("silvirium-remolder"){{
-            alwaysUnlocked = true;
-            requirements(Category.units, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.metaglass, 40),
-                new ItemStack(Items.silicon, 70),
-                new ItemStack(Items.metaglass, 50)
-            });
-            size = 3;
-            consumePower(0f);
-            health = 495;
-            consumeItems(new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 80),
-                new ItemStack(Items.silicon, 40),
-            });
-            constructTime = 900f;
-            addUpgrade(SLUnits.silvirror, SLUnits.silvokeor);
-        }};
-        
-        silvFacT3 = new Reconstructor("silvirium-regrower"){{
-            alwaysUnlocked = true;
-            requirements(Category.units, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.metaglass, 40),
-                new ItemStack(Items.silicon, 70),
-                new ItemStack(Items.metaglass, 50)
-            });
-            size = 4;
-            consumePower(0f);
-            health = 880;
-            consumeItems(new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.silicon, 150),
-            });
-            constructTime = 1800f;
-            addUpgrade(SLUnits.silvokeor, SLUnits.silvbane);
-        }};
-        
-        silvFacT4 = new Reconstructor("silvirium-reforge"){{
-            alwaysUnlocked = true;
-            requirements(Category.units, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.metaglass, 40),
-                new ItemStack(Items.silicon, 70),
-                new ItemStack(Items.metaglass, 50)
-            });
-            size = 5;
-            consumePower(0f);
-            health = 1375;
-            consumeItems(new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 1200),
-                new ItemStack(Items.silicon, 400),
-            });
-            constructTime = 2400f;
-            addUpgrade(SLUnits.silvbane, SLUnits.silvruner);
-        }};
-        
-        starFacT1 = new UnitFactory("star-molder"){{
-            alwaysUnlocked = true;
-            requirements(Category.units, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.lead, 40),
-                new ItemStack(Items.silicon, 70)
-            });
-            size = 2;
-            health = 220;
-            consumePower(0f);
-            plans.addAll(
-                new UnitPlan(
-                    SLUnits.star1, 0,
-                    new ItemStack[]{
-                      new ItemStack(SLItems.starFrag, 30),
-                      new ItemStack(Items.silicon, 20)
-                    }
-                )
-            );
-        }};*/
         //factory
-      /*
-        liqsilvfac = new GenericCrafter("liquid-silvirium-factory"){{
-            alwaysUnlocked = true;
-            requirements(Category.crafting, new ItemStack[]{
-                new ItemStack(SLItems.silvirium, 200),
-                new ItemStack(Items.metaglass, 40),
-                new ItemStack(Items.silicon, 70),
-                new ItemStack(SLItems.silviriumIng, 50)
-            });
-            outputLiquid = new LiquidStack(SLliquids.liquidSilvirium, 0.25f);
-            size = 2;
-            hasPower = true;
-            hasItems = true;
-            hasLiquids = true;
-            rotate = false;
-            solid = true;
-            outputsLiquid = true;
-            envEnabled = Env.any;
-            liquidCapacity = 12f;
-            craftTime = 60;
-            lightLiquid = SLliquids.liquidSilvirium;
-
-            consumePower(0.5f);
-            consumeItem(SLItems.silvirium);
-            drawer = new DrawMulti(
-                new DrawDefault(),
-                new DrawLiquidRegion(SLliquids.liquidSilvirium){{
-                suffix = "-liquid";
-                }},
-                new DrawRegion("-rot"){{
-                        layer = 40.4f;
-                        rotateSpeed = 10f;
-                }},
-                new DrawSoftParticles(){{
-                        color = SLPal.silviriumColor;
-                        color2 = SLPal.silviriumColor;
-                        alpha = 0.3f;
-                        particles = 7;
-                        particleLife = 70f;
-                        particleRad = 4f;
-                        particleSize = 3f;
-                        fadeMargin = 0.2f;
-                        rotateScl = 0.1f;
-                        particleInterp = Interp.one;
-                }},
-                new DrawRegion("-top"){{
-                        layer = 40.5f;
-                }}
-            );
-        }};
-        */
         stoneficator = new GenericCrafter("stoneficator"){{
             alwaysUnlocked = true;
             requirements(Category.crafting, new ItemStack[]{
@@ -314,7 +140,7 @@ public class ZytheronBlocks {
             solid = true;
             envEnabled = Env.any;
             itemCapacity = 10;
-            craftTime = 120;
+            craftTime = 60;
 
             //consumePower(0.5f);
             consumeItem(ZytheronItems.ignition,2);
@@ -335,7 +161,7 @@ public class ZytheronBlocks {
             solid = true;
             envEnabled = Env.any;
             itemCapacity = 10;
-            craftTime = 120;
+            craftTime = 40;
 
             consumePower(1f);
             consumeItem(ZytheronItems.redOre,2);
@@ -402,17 +228,17 @@ public class ZytheronBlocks {
         pelletDrill = new Drill("pelletDrill"){{
             requirements(Category.production, with(ZytheronItems.green, 8));
             tier = 1;
-            drillTime = 1300;
+            drillTime = 500;
             size = 1;
-            //consumeLiquid(Liquids.water, 1f / 60f).boost();
+            consumeLiquid(Liquids.water, 1f / 60f).boost();
         }};
 
         boulderDrill = new Drill("boulderDrill"){{
             requirements(Category.production, with(ZytheronItems.black, 12, ZytheronItems.green, 20));
             tier = 2;
-            drillTime = 300;
+            drillTime = 420;
             size = 2;
-            //consumeLiquid(Liquids.water, 3f / 60f).boost();
+            consumeLiquid(Liquids.water, 3f / 60f).boost();
         }};
 
 
@@ -427,6 +253,7 @@ public class ZytheronBlocks {
             });
             ammoTypes.putAll(
             ZytheronItems.green, new BasicBulletType(6f,10f){{
+                ammoMultiplier = 5f;
                 lifetime = 25;
 
                 //Color
@@ -462,11 +289,12 @@ public class ZytheronBlocks {
         dual = new ItemTurret("dual"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.green, 110),
-                new ItemStack(ZytheronItems.black, 80),
+                new ItemStack(ZytheronItems.green, 70),
+                new ItemStack(ZytheronItems.black, 50),
             });
             ammoTypes.putAll(
             ZytheronItems.green, new BasicBulletType(6f,14f){{
+                ammoMultiplier = 5f;
                 lifetime = 34;
 
                 //Color
@@ -528,7 +356,7 @@ public class ZytheronBlocks {
             });
             ammoTypes.putAll(
             ZytheronItems.red, new MissileBulletType(3f,35f){{
-                ammoMultiplier = 1f;
+                ammoMultiplier = 3f;
                 lifetime = 68f;
 
                 //Color
@@ -566,12 +394,12 @@ public class ZytheronBlocks {
         silo = new ItemTurret("silo"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.red, 160),
-                new ItemStack(ZytheronItems.black, 100),
+                new ItemStack(ZytheronItems.red, 80),
+                new ItemStack(ZytheronItems.black, 70),
             });
             ammoTypes.putAll(
             ZytheronItems.red, new MissileBulletType(4f,20f){{
-                ammoMultiplier = 1f;
+                ammoMultiplier = 3f;
                 lifetime = 60f;
 
                 //Color
@@ -639,7 +467,7 @@ public class ZytheronBlocks {
             });
             ammoTypes.putAll(
             ZytheronItems.ignition, new BulletType(3.35f, 20f){{
-                    ammoMultiplier = 3f;
+                    ammoMultiplier = 6f;
                     hitSize = 7f;
                     lifetime = 12f;
                     pierce = true;
@@ -670,12 +498,12 @@ public class ZytheronBlocks {
         flame = new ItemTurret("flame"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.ignition, 180),
-                new ItemStack(ZytheronItems.black, 140),
+                new ItemStack(ZytheronItems.ignition, 100),
+                new ItemStack(ZytheronItems.black, 80),
             });
             ammoTypes.putAll(
             ZytheronItems.ignition, new BulletType(3.35f, 28f){{
-                    ammoMultiplier = 3f;
+                    ammoMultiplier = 6f;
                     hitSize = 7f;
                     lifetime = 22f;
                     pierce = true;
@@ -707,7 +535,7 @@ public class ZytheronBlocks {
         greenWall = new Wall("greenWall"){{
             //alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
-                new ItemStack(ZytheronItems.green, 8),
+                new ItemStack(ZytheronItems.green, 6),
             });
             health = 480;
             size = 1;
@@ -716,7 +544,7 @@ public class ZytheronBlocks {
         largeGreenWall = new Wall("largeGreenWall"){{
             //alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
-                new ItemStack(ZytheronItems.green, 32),
+                new ItemStack(ZytheronItems.green, 24),
             });
             health = 1920;
             size = 2;
@@ -726,7 +554,7 @@ public class ZytheronBlocks {
         redWall = new Wall("redWall"){{
             //alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
-                new ItemStack(ZytheronItems.red, 8),
+                new ItemStack(ZytheronItems.red, 6),
             });
             health = 600;
             size = 1;
@@ -735,7 +563,7 @@ public class ZytheronBlocks {
         largeRedWall = new Wall("largeRedWall"){{
             //alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
-                new ItemStack(ZytheronItems.red, 32),
+                new ItemStack(ZytheronItems.red, 24),
             });
             health = 2400;
             size = 2;
