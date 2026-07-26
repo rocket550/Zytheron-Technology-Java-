@@ -230,7 +230,7 @@ public class ZytheronBlocks {
             tier = 1;
             drillTime = 500;
             size = 1;
-            consumeLiquid(Liquids.water, 1f / 60f).boost();
+            //consumeLiquid(Liquids.water, 1f / 60f).boost();//Needs fix
         }};
 
         boulderDrill = new Drill("boulderDrill"){{
@@ -238,7 +238,7 @@ public class ZytheronBlocks {
             tier = 2;
             drillTime = 420;
             size = 2;
-            consumeLiquid(Liquids.water, 3f / 60f).boost();
+            //consumeLiquid(Liquids.water, 3f / 60f).boost();Needs fix
         }};
 
 
