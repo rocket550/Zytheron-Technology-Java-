@@ -54,7 +54,7 @@ public class ZytheronBlocks {
     stoneficator, redfactory,
 
     //Ore
-    greenOre, redOre, ignitionOre,
+    volcaniteOre, greenOre, redOre, ignitionOre,
 
     //Turret
     bullet, dual,//Green
@@ -66,7 +66,12 @@ public class ZytheronBlocks {
 
     //Wall
     greenWall, largeGreenWall,//Green
-    redWall, largeRedWall;//Red
+    redWall, largeRedWall,//Red
+
+    //Logic
+    script, 
+    m5 ,m200 ,m600 ,m2000;//Testing messages
+
     
     public static void load(){
 
@@ -140,7 +145,7 @@ public class ZytheronBlocks {
             solid = true;
             envEnabled = Env.any;
             itemCapacity = 10;
-            craftTime = 60;
+            craftTime = 50;
 
             //consumePower(0.5f);
             consumeItem(ZytheronItems.ignition,2);
@@ -201,6 +206,18 @@ public class ZytheronBlocks {
             variants = 1;
         }};
 
+
+        volcaniteOre = new OreBlock("volcaniteOre", ZytheronItems.volcanite){{
+            alwaysUnlocked = true;
+            oreDefault = true;
+            oreScale = 5f;
+            oreThreshold = 0.4f;
+            //emitLight = true;
+            //lightRadius = 12f;
+            //lightColor = SLPal.silviriumColor;
+            variants = 1;
+        }};
+
         ignitionOre = new OreBlock("ignitionOre", ZytheronItems.ignition){{
             alwaysUnlocked = true;
             oreDefault = true;
@@ -226,7 +243,7 @@ public class ZytheronBlocks {
         //drills
 
         pelletDrill = new Drill("pelletDrill"){{
-            requirements(Category.production, with(ZytheronItems.green, 8));
+            requirements(Category.production, with(ZytheronItems.volcanite, 8));
             tier = 1;
             drillTime = 500;
             size = 1;
@@ -234,7 +251,7 @@ public class ZytheronBlocks {
         }};
 
         boulderDrill = new Drill("boulderDrill"){{
-            requirements(Category.production, with(ZytheronItems.black, 12, ZytheronItems.green, 20));
+            requirements(Category.production, with( ZytheronItems.volcanite, 20, ZytheronItems.black, 12));
             tier = 2;
             drillTime = 420;
             size = 2;
@@ -569,5 +586,39 @@ public class ZytheronBlocks {
             size = 2;
             //variants = 3;
         }};
+
+
+        //Logic
+
+        script = new MessageBlock("script"){{
+            requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
+        }};
+
+        //Testing
+        m5 = new MessageBlock("5"){{
+            requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
+            maxTextLength = 5;
+            maxNewlines = 24;        
+        }};
+        
+        m200 = new MessageBlock("200"){{
+            requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
+            maxTextLength = 600;
+            maxNewlines = 24;  
+        }};
+
+        m600 = new MessageBlock("600"){{
+            requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
+            maxTextLength = 600;
+            maxNewlines = 24;  
+        }};
+
+        m2000 = new MessageBlock("2000"){{
+            requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
+            maxTextLength = 2000;
+            maxNewlines = 24;  
+        }};
+
+
     }
     };

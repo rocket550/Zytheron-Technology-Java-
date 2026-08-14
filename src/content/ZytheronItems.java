@@ -3,9 +3,19 @@ package content;
 import mindustry.type.Item;
 
 public class ZytheronItems {
-public static Item ignition, black, redOre, red, green, blueOre, blue, transistor, processor;
+public static Item volcanite, green, ignition, black, redOre, red, blueOre, blue, transistor, processor;
 
     public static void load(){
+
+        volcanite = new Item("volcanite"){{
+            alwaysUnlocked = true;
+            explosiveness = 0f;
+            charge = 0f;
+            flammability = 0f;
+            radioactivity = 0f;
+            hardness = 1;
+            color = ZytheronColors.greenColor;
+        }};
 
         green = new Item("green"){{
             alwaysUnlocked = true;
