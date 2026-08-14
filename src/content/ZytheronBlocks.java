@@ -51,7 +51,7 @@ public class ZytheronBlocks {
     greenConveyor, basicJunction, basicRouter, basicSorter, basicInvertedSorter, basicOverflowGate, basicUnderflowGate,
     
     //Factory
-    stoneficator, redfactory,
+    stoneficator, redFactory,
 
     //Ore
     volcaniteOre, greenOre, redOre, ignitionOre,
@@ -153,7 +153,7 @@ public class ZytheronBlocks {
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
         }};
 
-        redfactory = new GenericCrafter("redfactory"){{
+        redFactory = new GenericCrafter("redFactory"){{
             alwaysUnlocked = true;
             requirements(Category.crafting, new ItemStack[]{
                 new ItemStack(ZytheronItems.green, 90),
@@ -252,7 +252,7 @@ public class ZytheronBlocks {
 
         boulderDrill = new Drill("boulderDrill"){{
             requirements(Category.production, with( ZytheronItems.volcanite, 20, ZytheronItems.black, 12));
-            tier = 2;
+            tier = 3;
             drillTime = 420;
             size = 2;
             //consumeLiquid(Liquids.water, 3f / 60f).boost();Needs fix
@@ -595,25 +595,25 @@ public class ZytheronBlocks {
         }};
 
         //Testing
-        m5 = new MessageBlock("5"){{
+        m5 = new MessageBlock("m5"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 5;
             maxNewlines = 24;        
         }};
         
-        m200 = new MessageBlock("200"){{
+        m200 = new MessageBlock("m200"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 600;
             maxNewlines = 24;  
         }};
 
-        m600 = new MessageBlock("600"){{
+        m600 = new MessageBlock("m600"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 600;
             maxNewlines = 24;  
         }};
 
-        m2000 = new MessageBlock("2000"){{
+        m2000 = new MessageBlock("m2000"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 2000;
             maxNewlines = 24;  
