@@ -365,7 +365,7 @@ public class ZytheronBlocks {
 
         }};
 
-        trocket = new ItemTurret("trocket"){{
+        trocket = new ItemTurret("trocket-missile-red"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
                 new ItemStack(ZytheronItems.red, 35),
@@ -374,23 +374,48 @@ public class ZytheronBlocks {
             ammoTypes.putAll(
             ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 3f;
-                lifetime = 68f;
+                
+                spawnUnit = new MissileUnitType("scathe-missile"){{
+                    speed = 4.6f;
+                    maxRange = 6f;
+                    lifetime = 60f * 5.5f;
+                    hitSize = 10f;
+                    outlineColor = Pal.darkOutline;
+                    engineColor = trailColor = Pal.redLight;
+                    engineLayer = Layer.effect;
+                    engineSize = 3.1f;
+                    engineOffset = 10f;
+                    rotateSpeed = 0.25f;
+                    trailLength = 18;
+                    missileAccelTime = 50f;
+                    lowAltitude = true;
+                    loopSound = Sounds.loopMissileTrail;
+                    loopSoundVolume = 0.6f;
+                    deathSound = Sounds.explosionMissile;
+                    targetAir = false;
+                    targetUnderBlocks = false;
 
-                //Color
-                frontColor = ZytheronColors.redColor;
-                backColor = ZytheronColors.redColorDark;
+                    fogRadius = 6f;
 
-                //Size
-                width = 9f;
-                height = 10f;
+                    health = 240;
+                        weapons.add(new Weapon(){{
+                        shootCone = 360f;
+                        mirror = false;
+                        reload = 1f;
+                        deathExplosionEffect = Fx.massiveExplosion;
+                        shootOnDeath = true;
+                        shake = 10f;
 
-                //Wave
-                weaveScale = 2;
-                weaveMag = 3;
+                        bullet = new ExplosionBulletType(50f, 65f){{
+                            hitColor = Pal.redLight;
+                            shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
+                            lifetime = 10f;
+                            strokeFrom = 4f;
+                            sizeTo = 130f;
+                        }});
 
-                //Homing
-                homingPower = 0.05f;
-                homingRange = 80f;
+                    }})
+                }}
                 
             }});
             size = 1;
