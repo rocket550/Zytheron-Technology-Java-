@@ -380,13 +380,13 @@ public class ZytheronBlocks {
                     maxRange = 6f;
                     lifetime = 60f * 5.5f;
                     hitSize = 10f;
-                    outlineColor = Pal.darkOutline;
+                    /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
                     engineLayer = Layer.effect;
                     engineSize = 3.1f;
-                    engineOffset = 10f;
+                    engineOffset = 10f;*/
                     rotateSpeed = 0.25f;
-                    trailLength = 18;
+                    //trailLength = 18;
                     missileAccelTime = 50f;
                     lowAltitude = true;
                     //loopSound = Sounds.loopMissileTrail;
@@ -408,12 +408,12 @@ public class ZytheronBlocks {
                         shake = 10f;
 
                         bullet = new ExplosionBulletType(50f, 65f){{
-                            hitColor = Pal.redLight;
-                            //shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
+                            /*hitColor = Pal.redLight;
+                            /*shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
                             lifetime = 10f;
                             strokeFrom = 4f;
                             sizeTo = 130f;
-                        //}});
+                        }});*/
                     }};
                     }});
                 }};
