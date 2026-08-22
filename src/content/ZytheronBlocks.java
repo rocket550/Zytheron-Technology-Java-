@@ -370,7 +370,7 @@ public class ZytheronBlocks {
             requirements(Category.turret, new ItemStack[]{
                 new ItemStack(ZytheronItems.red, 35),
                 new ItemStack(ZytheronItems.black, 20),
-            });contraseña
+            });
             ammoTypes.putAll(
             ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 3f;
@@ -398,6 +398,7 @@ public class ZytheronBlocks {
                     fogRadius = 6f;
 
                     health = 240;
+                    
                         weapons.add(new Weapon(){{
                         shootCone = 360f;
                         mirror = false;
