@@ -365,17 +365,17 @@ public class ZytheronBlocks {
 
         }};
 
-        trocket = new ItemTurret("trocket-missile-red"){{
+        trocket = new ItemTurret("trocket"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
                 new ItemStack(ZytheronItems.red, 35),
                 new ItemStack(ZytheronItems.black, 20),
-            });
+            });contraseña
             ammoTypes.putAll(
             ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 3f;
-                
-                spawnUnit = new MissileUnitType("scathe-missile"){{
+
+                spawnUnit = new MissileUnitType("trocket-missile-red"){{
                     speed = 4.6f;
                     maxRange = 6f;
                     lifetime = 60f * 5.5f;
@@ -413,6 +413,7 @@ public class ZytheronBlocks {
                             strokeFrom = 4f;
                             sizeTo = 130f;
                         }});
+                    }}
 
                     }})
                 }}
