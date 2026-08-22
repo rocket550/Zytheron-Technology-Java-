@@ -85,7 +85,7 @@ public class ZytheronBlocks {
             buildCostMultiplier = 2f;
             //researchCost = with(ZytheronItems.Green, 10);
         }};
-
+    
         basicJunction = new Junction("basicJunction"){{
             requirements(Category.distribution, with(ZytheronItems.green, 4));
             speed = 26;
@@ -389,31 +389,31 @@ public class ZytheronBlocks {
                     trailLength = 18;
                     missileAccelTime = 50f;
                     lowAltitude = true;
-                    loopSound = Sounds.loopMissileTrail;
-                    loopSoundVolume = 0.6f;
-                    deathSound = Sounds.explosionMissile;
+                    //loopSound = Sounds.loopMissileTrail;
+                    //loopSoundVolume = 0.6f;
+                    //deathSound = Sounds.explosionMissile;
                     targetAir = false;
                     targetUnderBlocks = false;
 
                     fogRadius = 6f;
 
-                    health = 240;
+                    health = 120;
                     
                         weapons.add(new Weapon(){{
                         shootCone = 360f;
                         mirror = false;
                         reload = 1f;
-                        deathExplosionEffect = Fx.massiveExplosion;
+                        //deathExplosionEffect = Fx.massiveExplosion;
                         shootOnDeath = true;
                         shake = 10f;
 
                         bullet = new ExplosionBulletType(50f, 65f){{
                             hitColor = Pal.redLight;
-                            shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
+                            //shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
                             lifetime = 10f;
                             strokeFrom = 4f;
                             sizeTo = 130f;
-                        }});
+                        //}});
                     }};
                     }});
                 }};
@@ -624,25 +624,25 @@ public class ZytheronBlocks {
         m5 = new MessageBlock("m5"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 5;
-            maxNewlines = 24;        
+            maxNewlines = 24;
         }};
         
         m200 = new MessageBlock("m200"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
-            maxTextLength = 600;
-            maxNewlines = 24;  
+            maxTextLength = 200;
+            maxNewlines = 24;
         }};
 
         m600 = new MessageBlock("m600"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 600;
-            maxNewlines = 24;  
+            maxNewlines = 24;
         }};
 
         m2000 = new MessageBlock("m2000"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
             maxTextLength = 2000;
-            maxNewlines = 24;  
+            maxNewlines = 24;
         }};
 
 
