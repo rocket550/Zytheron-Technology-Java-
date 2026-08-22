@@ -414,10 +414,9 @@ public class ZytheronBlocks {
                             strokeFrom = 4f;
                             sizeTo = 130f;
                         }});
-                    }}
-
-                    }})
-                }}
+                    }};
+                    }});
+                }};
                 
             }});
             size = 1;
