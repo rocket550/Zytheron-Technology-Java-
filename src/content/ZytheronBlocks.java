@@ -53,11 +53,14 @@ public class ZytheronBlocks {
     //Factory
     stoneficator, redFactory,
 
+    //Converters
+    volcaniteConverter, greenConverter, ignitionConverter, redConverter,
+
     //Ore
     volcaniteOre, greenOre, redOre, ignitionOre,
 
     //Turret
-    bullet, dual,//Green
+    bullet, dual, trio,//Green
     trocket, launcher,//Red
     candle, flame,//Fire
 
@@ -173,6 +176,98 @@ public class ZytheronBlocks {
             outputItem = new ItemStack(ZytheronItems.red, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
         }};
+
+
+
+
+
+
+        volcaniteConverter = new GenericCrafter("volcaniteConverter"){{
+            alwaysUnlocked = true;
+            requirements(Category.crafting, new ItemStack[]{
+                new ItemStack(Items.copper, 20),
+                new ItemStack(Items.lead, 20),
+            });
+            size = 2;
+            hasPower = false;
+            hasItems = true;
+            rotate = false;
+            solid = true;
+            envEnabled = Env.any;
+            itemCapacity = 10;
+            craftTime = 10;
+
+            consumeItem(Items.copper,1);
+            outputItem = new ItemStack(ZytheronItems.volcanite, 1);
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
+        }};
+
+
+        greenConverter = new GenericCrafter("greenConverter"){{
+            alwaysUnlocked = true;
+            requirements(Category.crafting, new ItemStack[]{
+                new ItemStack(ZytheronItems.volcanite, 20),
+                new ItemStack(Items.lead, 20),
+            });
+            size = 2;
+            hasPower = false;
+            hasItems = true;
+            rotate = false;
+            solid = true;
+            envEnabled = Env.any;
+            itemCapacity = 10;
+            craftTime = 10;
+
+            consumeItem(Items.lead,1);
+            outputItem = new ItemStack(ZytheronItems.green, 1);
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
+        }};
+
+
+        ignitionConverter = new GenericCrafter("ignitionConverter"){{
+            alwaysUnlocked = true;
+            requirements(Category.crafting, new ItemStack[]{
+                new ItemStack(ZytheronItems.volcanite, 20),
+                new ItemStack(ZytheronItems.green, 20),
+            });
+            size = 2;
+            hasPower = false;
+            hasItems = true;
+            rotate = false;
+            solid = true;
+            envEnabled = Env.any;
+            itemCapacity = 10;
+            craftTime = 10;
+
+            consumeItem(Items.coal,1);
+            outputItem = new ItemStack(ZytheronItems.ignition, 1);
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
+        }};
+
+        redConverter = new GenericCrafter("redConverter"){{
+            alwaysUnlocked = true;
+            requirements(Category.crafting, new ItemStack[]{
+                new ItemStack(ZytheronItems.volcanite, 30),
+                new ItemStack(ZytheronItems.green, 30),
+            });
+            size = 2;
+            hasPower = false;
+            hasItems = true;
+            rotate = false;
+            solid = true;
+            envEnabled = Env.any;
+            itemCapacity = 10;
+            craftTime = 10;
+
+            consumeItem(Items.titanium,1);
+            outputItem = new ItemStack(ZytheronItems.redOre, 1);
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
+        }};
+
+
+
+
+
          /*
         starfac = new GenericCrafter("star-factory"){{
             alwaysUnlocked = true;
@@ -199,7 +294,7 @@ public class ZytheronBlocks {
             alwaysUnlocked = true;
             oreDefault = true;
             oreScale = 9f;
-            oreThreshold = 0.7f;
+            oreThreshold = 0.88f;
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
@@ -211,7 +306,7 @@ public class ZytheronBlocks {
             alwaysUnlocked = true;
             oreDefault = true;
             oreScale = 5f;
-            oreThreshold = 0.4f;
+            oreThreshold = 0.88f;
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
@@ -222,7 +317,7 @@ public class ZytheronBlocks {
             alwaysUnlocked = true;
             oreDefault = true;
             oreScale = 9;
-            oreThreshold = 0.6f;
+            oreThreshold = 0.88f;
             //emitLight = true;
             //lightRadius = 12f;
             //lightColor = SLPal.silviriumColor;
@@ -306,13 +401,13 @@ public class ZytheronBlocks {
         dual = new ItemTurret("dual"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.green, 70),
+                new ItemStack(ZytheronItems.green, 60),
                 new ItemStack(ZytheronItems.black, 50),
             });
             ammoTypes.putAll(
             ZytheronItems.green, new BasicBulletType(6f,14f){{
                 ammoMultiplier = 5f;
-                lifetime = 34;
+                lifetime = 31;
 
                 //Color
                 frontColor = ZytheronColors.greenColor;
@@ -337,7 +432,7 @@ public class ZytheronBlocks {
             shootCone = 2f;
             maxAmmo = 25;
             rotateSpeed = 4f;
-            range = 200;
+            range = 184;
             health = 1000;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(16f / 60);
@@ -353,6 +448,70 @@ public class ZytheronBlocks {
             recoils = 2;
             drawer = new DrawTurret(){{
                 for(int i = 2; i > 0; i--){
+                    int f = i;
+                    parts.add(new RegionPart("-barrel-" + i){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f - 1;
+                        under = true;
+                        moveY = -2f;
+                    }});
+                }
+            }};
+
+        }};
+
+
+        trio = new ItemTurret("trio"){{
+            alwaysUnlocked = true;
+            requirements(Category.turret, new ItemStack[]{
+                new ItemStack(ZytheronItems.green, 135),
+                new ItemStack(ZytheronItems.black, 110),
+            });
+            ammoTypes.putAll(
+            ZytheronItems.green, new BasicBulletType(8.5f,18f){{
+                ammoMultiplier = 5f;
+                lifetime = 27;
+
+                //Color
+                frontColor = ZytheronColors.greenColor;
+                backColor = ZytheronColors.greenColorDark;
+
+                //Trail
+                trailColor  = ZytheronColors.greenColorDark;
+                trailLength = 7;
+
+                //Size
+                width = 9;
+                height = 13;
+
+                //Pierce
+                pierce = pierceBuilding = true;
+                pierceCap = 2;
+            }});
+            size = 2;
+            recoil = 1f;
+            reload = 16.4f;
+            inaccuracy = 4f;
+            shootCone = 2f;
+            maxAmmo = 32;
+            rotateSpeed = 3.6f;
+            range = 228.6;
+            health = 1600;
+            flags = EnumSet.of(BlockFlag.turret);
+            coolant = consumeCoolant(20f / 60);
+            //shootEffect = SLFx.silviriumHit1Effect;
+
+            shoot = new ShootBarrel(){{
+                barrels = new float[]{
+                2f, 0f, 0f,
+                0f, 1f, 0f,
+                -2f, 0f, 0f,
+                };
+            }};
+
+            recoils = 3;
+            drawer = new DrawTurret(){{
+                for(int i = 3; i > 0; i--){
                     int f = i;
                     parts.add(new RegionPart("-barrel-" + i){{
                         progress = PartProgress.recoil;
