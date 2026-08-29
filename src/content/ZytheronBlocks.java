@@ -412,7 +412,7 @@ public class ZytheronBlocks {
                             /*shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
                             lifetime = 10f;
                             strokeFrom = 4f;
-                            sizeTo = 130f;
+                            sizeTo = 130f;s
                         }});*/
                     }};
                     }});
@@ -476,7 +476,7 @@ public class ZytheronBlocks {
                         shootOnDeath = true;
                         shake = 2f;
 
-                        bullet = new ExplosionBulletType(110f, 36fs){{
+                        bullet = new ExplosionBulletType(110f, 36f){{
                             /*hitColor = Pal.redLight;
                             /*shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
                             lifetime = 10f;
