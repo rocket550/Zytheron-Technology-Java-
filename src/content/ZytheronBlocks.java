@@ -38,6 +38,7 @@ import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
+import mindustry.content.Items;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
@@ -495,7 +496,7 @@ public class ZytheronBlocks {
             shootCone = 2f;
             maxAmmo = 32;
             rotateSpeed = 3.6f;
-            range = 228.6;
+            range = 228.6f;
             health = 1600;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(20f / 60);
