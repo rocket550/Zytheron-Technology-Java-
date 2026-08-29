@@ -58,7 +58,7 @@ public class ZytheronBlocks {
 
     //Turret
     bullet, dual,//Green
-    trocket, silo,//Red
+    trocket, launcher,//Red
     candle, flame,//Fire
 
     //Drill
@@ -69,7 +69,7 @@ public class ZytheronBlocks {
     redWall, largeRedWall,//Red
 
     //Logic
-    script, 
+    script,
     m5 ,m200 ,m600 ,m2000;//Testing messages
 
     
@@ -376,16 +376,16 @@ public class ZytheronBlocks {
                 ammoMultiplier = 3f;
 
                 spawnUnit = new MissileUnitType("trocket-missile-red"){{
-                    speed = 4.6f;
+                    speed = 2f;
                     maxRange = 6f;
-                    lifetime = 60f * 5.5f;
-                    hitSize = 10f;
+                    lifetime = 120f;
+                    hitSize = 5f;
                     /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
                     engineLayer = Layer.effect;
                     engineSize = 3.1f;
                     engineOffset = 10f;*/
-                    rotateSpeed = 0.25f;
+                    rotateSpeed = 0.4f;
                     //trailLength = 18;
                     missileAccelTime = 50f;
                     lowAltitude = true;
@@ -405,9 +405,9 @@ public class ZytheronBlocks {
                         reload = 1f;
                         //deathExplosionEffect = Fx.massiveExplosion;
                         shootOnDeath = true;
-                        shake = 10f;
+                        shake = 2f;
 
-                        bullet = new ExplosionBulletType(50f, 65f){{
+                        bullet = new ExplosionBulletType(50f, 20f){{
                             /*hitColor = Pal.redLight;
                             /*shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
                             lifetime = 10f;
@@ -421,12 +421,12 @@ public class ZytheronBlocks {
             }});
             size = 1;
             recoil = 1f;
-            reload = 60;
+            reload = 140;
             inaccuracy = 1f;
             shootCone = 2f;
             maxAmmo = 5;
             rotateSpeed = 4f;
-            range = 200;
+            range = 240;
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(3f / 60);
@@ -434,52 +434,74 @@ public class ZytheronBlocks {
         }};
 
 
-        silo = new ItemTurret("silo"){{
+        launcher = new ItemTurret("launcher"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
                 new ItemStack(ZytheronItems.red, 80),
                 new ItemStack(ZytheronItems.black, 70),
             });
             ammoTypes.putAll(
-            ZytheronItems.red, new MissileBulletType(4f,20f){{
+            ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 3f;
-                lifetime = 60f;
 
-                //Color
-                frontColor = ZytheronColors.redColor;
-                backColor = ZytheronColors.redColorDark;
+                spawnUnit = new MissileUnitType("launcher-missile-red"){{
+                    speed = 3f;
+                    maxRange = 6f;
+                    lifetime = 99f;
+                    hitSize = 7f;
+                    /*outlineColor = Pal.darkOutline;
+                    engineColor = trailColor = Pal.redLight;
+                    engineLayer = Layer.effect;
+                    engineSize = 3.1f;
+                    engineOffset = 10f;*/
+                    rotateSpeed = 0.4f;
+                    //trailLength = 18;
+                    missileAccelTime = 50f;
+                    lowAltitude = true;
+                    //loopSound = Sounds.loopMissileTrail;
+                    //loopSoundVolume = 0.6f;
+                    //deathSound = Sounds.explosionMissile;
+                    targetAir = false;
+                    targetUnderBlocks = false;
 
-                //Size
-                width = 9f;
-                height = 10f;
+                    fogRadius = 6f;
 
-                //Area Damage
-                splashDamageRadius = 2f * 8;
-                splashDamage = 10f;
+                    health = 170f;
+                    
+                        weapons.add(new Weapon(){{
+                        shootCone = 360f;
+                        mirror = false;
+                        reload = 1f;
+                        //deathExplosionEffect = Fx.massiveExplosion;
+                        shootOnDeath = true;
+                        shake = 2f;
 
-                //Wave
-                weaveScale = 2;
-                weaveMag = 3;
-
-                //Homing
-                homingPower = 0.05f;
-                homingRange = 80f;
+                        bullet = new ExplosionBulletType(110f, 36fs){{
+                            /*hitColor = Pal.redLight;
+                            /*shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
+                            lifetime = 10f;
+                            strokeFrom = 4f;
+                            sizeTo = 130f;
+                        }});*/
+                    }};
+                    }});
+                }};
                 
             }});
             size = 2;
             recoil = 1f;
-            reload = 28;
+            reload = 165;
             inaccuracy = 2f;
             shootCone = 2f;
             maxAmmo = 10;
             rotateSpeed = 3.6f;
-            range = 236.8f;
+            range = 296.4;
             health = 1100;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(14f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
 
-            shoot = new ShootBarrel(){{
+            /*shoot = new ShootBarrel(){{
                 barrels = new float[]{
                 0f, 1f, 0f,
                 3.3f, -1.5f, 0f,
@@ -498,7 +520,7 @@ public class ZytheronBlocks {
                         moveY = -2f;
                     }});
                 }
-            }};
+            }};*/
 
         }};
 
