@@ -62,7 +62,7 @@ public class ZytheronBlocks {
 
     //Turret
     bullet, dual, trio,//Green
-    trocket, launcher,//Red
+    trocket, launcher, silo,//Red
     candle, flame,//Fire
 
     //Drill
@@ -396,6 +396,7 @@ public class ZytheronBlocks {
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(6f / 60);
+            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
 
@@ -437,6 +438,7 @@ public class ZytheronBlocks {
             health = 1000;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(16f / 60);
+            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
@@ -489,9 +491,9 @@ public class ZytheronBlocks {
                 pierce = pierceBuilding = true;
                 pierceCap = 2;
             }});
-            size = 2;
+            size = 3;
             recoil = 1f;
-            reload = 16.4f;
+            reload = 11.4f;
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 32;
@@ -500,13 +502,14 @@ public class ZytheronBlocks {
             health = 1600;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(20f / 60);
+            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
                 barrels = new float[]{
-                2f, 0f, 0f,
-                0f, 1f, 0f,
-                -2f, 0f, 0f,
+                2f, 0.5f, 0f,
+                0f, 1.5f, 0f,
+                -2f, 0.5f, 0f,
                 };
             }};
 
@@ -538,7 +541,7 @@ public class ZytheronBlocks {
                 spawnUnit = new MissileUnitType("trocket-missile-red"){{
                     speed = 2f;
                     maxRange = 6f;
-                    lifetime = 185f;
+                    lifetime = 180f;
                     hitSize = 5f;
                     /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
@@ -557,7 +560,7 @@ public class ZytheronBlocks {
 
                     fogRadius = 6f;
 
-                    health = 120;
+                    health = 100;
                     
                         weapons.add(new Weapon(){{
                         shootCone = 360f;
@@ -592,6 +595,7 @@ public class ZytheronBlocks {
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(3f / 60);
+            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
         }};
 
@@ -628,7 +632,7 @@ public class ZytheronBlocks {
 
                     fogRadius = 6f;
 
-                    health = 170f;
+                    health = 130f;
                     
                         weapons.add(new Weapon(){{
                         shootCone = 360f;
@@ -663,6 +667,7 @@ public class ZytheronBlocks {
             health = 1100;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(14f / 60);
+            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
 
             /*shoot = new ShootBarrel(){{
@@ -685,6 +690,101 @@ public class ZytheronBlocks {
                     }});
                 }
             }};*/
+
+        }};
+
+
+        silo = new ItemTurret("silo"){{
+            alwaysUnlocked = true;
+            requirements(Category.turret, new ItemStack[]{
+                new ItemStack(ZytheronItems.red, 140),
+                new ItemStack(ZytheronItems.black, 115),
+            });
+            ammoTypes.putAll(
+            ZytheronItems.red, new MissileBulletType(3f,35f){{
+                ammoMultiplier = 3f;
+
+                spawnUnit = new MissileUnitType("silo-missile-red"){{
+                    speed = 3f;
+                    maxRange = 6f;
+                    lifetime = 148f;
+                    hitSize = 8.5f;
+                    /*outlineColor = Pal.darkOutline;
+                    engineColor = trailColor = Pal.redLight;
+                    engineLayer = Layer.effect;
+                    engineSize = 3.1f;
+                    engineOffset = 10f;*/
+                    rotateSpeed = 0.4f;
+                    //trailLength = 18;
+                    missileAccelTime = 50f;
+                    lowAltitude = true;
+                    //loopSound = Sounds.loopMissileTrail;
+                    //loopSoundVolume = 0.6f;
+                    //deathSound = Sounds.explosionMissile;
+                    targetAir = false;
+                    targetUnderBlocks = false;
+
+                    fogRadius = 6f;
+
+                    health = 160f;
+                    
+                        weapons.add(new Weapon(){{
+                        shootCone = 360f;
+                        mirror = false;
+                        reload = 1f;
+                        //deathExplosionEffect = Fx.massiveExplosion;
+                        shootOnDeath = true;
+                        shake = 2f;
+
+                        bullet = new ExplosionBulletType(160f, 54f){{
+                            /*hitColor = Pal.redLight;
+                            /*shootEffect = new MultiEffect(Fx.massiveExplosion, Fx.scatheExplosion, Fx.scatheLight, new WaveEffect(){{
+                            lifetime = 10f;
+                            strokeFrom = 4f;
+                            sizeTo = 130f;
+                        }});*/
+                    }};
+                    }});
+                }};
+                
+            }});
+            size = 2;
+            recoil = 1f;
+            reload = 240f;
+            inaccuracy = 2f;
+            shootCone = 2f;
+            maxAmmo = 10;
+            rotateSpeed = 2f;
+            range = 399.4f;
+            targetAir = false;
+            predictTarget = false;
+            health = 1850;
+            flags = EnumSet.of(BlockFlag.turret);
+            coolant = consumeCoolant(14f / 60);
+            drawer = new DrawTurret("black-");
+            //shootEffect = SLFx.silviriumHit1Effect;
+
+            shoot = new ShootBarrel(){{
+                barrels = new float[]{
+                3.3f, 1.5f, 0f,
+                -3.3f, 1.5f, 0f,
+                };
+                shots = 2f;
+                shotDelay = 20f;
+            }};
+
+            recoils = 2;
+            drawer = new DrawTurret(){{
+                for(int i = 2; i > 0; i--){
+                    int f = i;
+                    parts.add(new RegionPart("-barrel-" + i){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f - 1;
+                        under = true;
+                        moveY = -2f;
+                    }});
+                }
+            }};
 
         }};
 
