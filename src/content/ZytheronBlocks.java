@@ -378,7 +378,7 @@ public class ZytheronBlocks {
                 spawnUnit = new MissileUnitType("trocket-missile-red"){{
                     speed = 2f;
                     maxRange = 6f;
-                    lifetime = 120f;
+                    lifetime = 200f;
                     hitSize = 5f;
                     /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
@@ -447,7 +447,7 @@ public class ZytheronBlocks {
                 spawnUnit = new MissileUnitType("launcher-missile-red"){{
                     speed = 3f;
                     maxRange = 6f;
-                    lifetime = 99f;
+                    lifetime = 170f;
                     hitSize = 7f;
                     /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
