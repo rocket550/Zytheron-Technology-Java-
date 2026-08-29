@@ -378,7 +378,7 @@ public class ZytheronBlocks {
                 spawnUnit = new MissileUnitType("trocket-missile-red"){{
                     speed = 2f;
                     maxRange = 6f;
-                    lifetime = 200f;
+                    lifetime = 185f;
                     hitSize = 5f;
                     /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
@@ -425,8 +425,10 @@ public class ZytheronBlocks {
             inaccuracy = 1f;
             shootCone = 2f;
             maxAmmo = 5;
-            rotateSpeed = 4f;
+            rotateSpeed = 3f;
             range = 240;
+            targetAir = false;
+            predictTarget = false;
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(3f / 60);
@@ -445,7 +447,7 @@ public class ZytheronBlocks {
                 ammoMultiplier = 3f;
 
                 spawnUnit = new MissileUnitType("launcher-missile-red"){{
-                    speed = 3f;
+                    speed = 2.4f;
                     maxRange = 6f;
                     lifetime = 170f;
                     hitSize = 7f;
@@ -490,12 +492,14 @@ public class ZytheronBlocks {
             }});
             size = 2;
             recoil = 1f;
-            reload = 165;
+            reload = 190f;
             inaccuracy = 2f;
             shootCone = 2f;
             maxAmmo = 10;
-            rotateSpeed = 3.6f;
+            rotateSpeed = 2.6f;
             range = 296.4f;
+            targetAir = false;
+            predictTarget = false;
             health = 1100;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(14f / 60);
