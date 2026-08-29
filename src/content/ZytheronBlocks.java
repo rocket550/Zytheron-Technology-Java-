@@ -495,7 +495,7 @@ public class ZytheronBlocks {
             shootCone = 2f;
             maxAmmo = 10;
             rotateSpeed = 3.6f;
-            range = 296.4;
+            range = 296.4f;
             health = 1100;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(14f / 60);
