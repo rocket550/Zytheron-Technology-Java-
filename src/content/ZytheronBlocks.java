@@ -83,6 +83,7 @@ public class ZytheronBlocks {
 
         greenConveyor = new Conveyor("greenConveyor"){{
             requirements(Category.distribution, with(ZytheronItems.green, 1));
+            alwaysUnlocked = true;
             health = 60;
             speed = 0.035f;
             displayedSpeed = 100000f;
@@ -92,6 +93,7 @@ public class ZytheronBlocks {
     
         basicJunction = new Junction("basicJunction"){{
             requirements(Category.distribution, with(ZytheronItems.green, 4));
+            alwaysUnlocked = true;
             speed = 26;
             capacity = 6;
             health = 60;
@@ -100,18 +102,21 @@ public class ZytheronBlocks {
 
         basicRouter = new Router("basicRouter"){{
             requirements(Category.distribution, with(ZytheronItems.green, 2));
+            alwaysUnlocked = true;
             health = 60;
             buildCostMultiplier = 4f;
         }};
 
         basicSorter = new Sorter("basicSorter"){{
             requirements(Category.distribution, with(ZytheronItems.black, 3));
+            alwaysUnlocked = true;
             health = 60;
             buildCostMultiplier = 3f;
         }};
 
         basicInvertedSorter = new Sorter("basicInvertedSorter"){{
             requirements(Category.distribution, with(ZytheronItems.black, 3));
+            alwaysUnlocked = true;
             health = 60;
             buildCostMultiplier = 3f;
             invert = true;
@@ -119,18 +124,21 @@ public class ZytheronBlocks {
 
         /*basicDistributor = new Router("distributor"){{
             requirements(Category.distribution, with(Items.lead, 4, Items.copper, 4));
+            alwaysUnlocked = true;
             buildCostMultiplier = 3f;
             size = 2;
         }};*/
 
         basicOverflowGate = new OverflowGate("basicOverflowGate"){{
             requirements(Category.distribution, with(ZytheronItems.black, 3, ZytheronItems.green, 3));
+            alwaysUnlocked = true;
             health = 60;
             buildCostMultiplier = 3f;
         }};
 
         basicUnderflowGate = new OverflowGate("basicUnderflowGate"){{
             requirements(Category.distribution, with(ZytheronItems.black, 3, ZytheronItems.green, 3));
+            alwaysUnlocked = true;
             health = 60;
             buildCostMultiplier = 3f;
             invert = true;
@@ -340,6 +348,7 @@ public class ZytheronBlocks {
 
         pelletDrill = new Drill("pelletDrill"){{
             requirements(Category.production, with(ZytheronItems.volcanite, 8));
+            alwaysUnlocked = true;
             tier = 1;
             drillTime = 500;
             size = 1;
@@ -348,6 +357,7 @@ public class ZytheronBlocks {
 
         boulderDrill = new Drill("boulderDrill"){{
             requirements(Category.production, with( ZytheronItems.volcanite, 20, ZytheronItems.black, 12));
+            alwaysUnlocked = true;
             tier = 3;
             drillTime = 420;
             size = 2;
@@ -865,7 +875,7 @@ public class ZytheronBlocks {
         //util
       
         greenWall = new Wall("greenWall"){{
-            //alwaysUnlocked = true;
+            alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
                 new ItemStack(ZytheronItems.green, 6),
             });
@@ -874,7 +884,7 @@ public class ZytheronBlocks {
             //variants = 3;
         }};
         largeGreenWall = new Wall("largeGreenWall"){{
-            //alwaysUnlocked = true;
+            alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
                 new ItemStack(ZytheronItems.green, 24),
             });
@@ -884,7 +894,7 @@ public class ZytheronBlocks {
         }};
 
         redWall = new Wall("redWall"){{
-            //alwaysUnlocked = true;
+            alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
                 new ItemStack(ZytheronItems.red, 6),
             });
@@ -893,7 +903,7 @@ public class ZytheronBlocks {
             //variants = 3;
         }};
         largeRedWall = new Wall("largeRedWall"){{
-            //alwaysUnlocked = true;
+            alwaysUnlocked = true;
             requirements(Category.defense, new ItemStack[]{
                 new ItemStack(ZytheronItems.red, 24),
             });
