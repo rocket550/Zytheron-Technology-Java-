@@ -438,7 +438,6 @@ public class ZytheronBlocks {
             health = 1000;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(16f / 60);
-            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
@@ -449,7 +448,7 @@ public class ZytheronBlocks {
             }};
 
             recoils = 2;
-            drawer = new DrawTurret(){{
+            drawer = new DrawTurret("black-"){{
                 for(int i = 2; i > 0; i--){
                     int f = i;
                     parts.add(new RegionPart("-barrel-" + i){{
@@ -502,7 +501,6 @@ public class ZytheronBlocks {
             health = 1600;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(20f / 60);
-            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
@@ -514,7 +512,7 @@ public class ZytheronBlocks {
             }};
 
             recoils = 3;
-            drawer = new DrawTurret(){{
+            drawer = new DrawTurret("black-"){{
                 for(int i = 3; i > 0; i--){
                     int f = i;
                     parts.add(new RegionPart("-barrel-" + i){{
@@ -707,7 +705,7 @@ public class ZytheronBlocks {
                 spawnUnit = new MissileUnitType("silo-missile-red"){{
                     speed = 3f;
                     maxRange = 6f;
-                    lifetime = 148f;
+                    lifetime = 170f;
                     hitSize = 8.5f;
                     /*outlineColor = Pal.darkOutline;
                     engineColor = trailColor = Pal.redLight;
@@ -761,20 +759,19 @@ public class ZytheronBlocks {
             health = 1850;
             flags = EnumSet.of(BlockFlag.turret);
             coolant = consumeCoolant(14f / 60);
-            drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
 
             shoot = new ShootBarrel(){{
                 barrels = new float[]{
-                3.3f, 1.5f, 0f,
-                -3.3f, 1.5f, 0f,
+                3.5f, 1.5f, 0f,
+                -3.5f, 1.5f, 0f,
                 };
                 shots = 2;
                 shotDelay = 20f;
             }};
 
             recoils = 2;
-            drawer = new DrawTurret(){{
+            drawer = new DrawTurret("black-"){{
                 for(int i = 2; i > 0; i--){
                     int f = i;
                     parts.add(new RegionPart("-barrel-" + i){{
