@@ -556,6 +556,8 @@ public class ZytheronBlocks {
                     targetAir = false;
                     targetUnderBlocks = false;
 
+                    engineColor = ZytheronColors.redColor;
+
                     fogRadius = 6f;
 
                     health = 100;
@@ -627,6 +629,8 @@ public class ZytheronBlocks {
                     //deathSound = Sounds.explosionMissile;
                     targetAir = false;
                     targetUnderBlocks = false;
+
+                    engineColor = ZytheronColors.redColor;
 
                     fogRadius = 6f;
 
@@ -721,6 +725,8 @@ public class ZytheronBlocks {
                     //deathSound = Sounds.explosionMissile;
                     targetAir = false;
                     targetUnderBlocks = false;
+
+                    engineColor = ZytheronColors.redColor;
 
                     fogRadius = 6f;
 
