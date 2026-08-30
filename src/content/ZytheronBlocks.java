@@ -748,7 +748,7 @@ public class ZytheronBlocks {
                 }};
                 
             }});
-            size = 2;
+            size = 3;
             recoil = 1f;
             reload = 240f;
             inaccuracy = 2f;
@@ -769,7 +769,7 @@ public class ZytheronBlocks {
                 3.3f, 1.5f, 0f,
                 -3.3f, 1.5f, 0f,
                 };
-                shots = 2f;
+                shots = 2;
                 shotDelay = 20f;
             }};
 
