@@ -73,7 +73,7 @@ public class ZytheronBlocks {
     redWall, largeRedWall,//Red
 
     //Logic
-    script,
+    script, hologram,
     m5 ,m200 ,m600 ,m2000;//Testing messages
 
     
@@ -188,6 +188,33 @@ public class ZytheronBlocks {
 
 
 
+        rocketfuelmixer = new GenericCrafter("rocketfuelmixer"){{
+            alwaysUnlocked = true;
+            requirements(Category.crafting, new ItemStack[]{
+                new ItemStack(ZytheronItems.volcanite, 50),
+                new ItemStack(ZytheronItems.green, 50),
+                new ItemStack(ZytheronItems.black, 40),
+            });
+            size = 2;
+            //hasPower = true;
+            hasItems = true;
+            rotate = false;
+            solid = true;
+            envEnabled = Env.any;
+            itemCapacity = 10;
+            craftTime = 120;
+            outputsLiquid = true;
+            hasLiquids = true;
+            liquidCapacity = 36f;
+            lightLiquid = ZytheronLiquids.rocketfuel;
+
+            //consumePower(1f);
+            consumeLiquid(Liquids.water, 9f / 60f);
+            consumeItem(ZytheronItems.ignition,1);
+            outputItem = new ItemStack(ZytheronItems.red, 1);
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
+        }};
+
 
 
 
@@ -211,7 +238,6 @@ public class ZytheronBlocks {
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
         }};
 
-
         greenConverter = new GenericCrafter("greenConverter"){{
             alwaysUnlocked = true;
             requirements(Category.crafting, new ItemStack[]{
@@ -231,7 +257,6 @@ public class ZytheronBlocks {
             outputItem = new ItemStack(ZytheronItems.green, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
         }};
-
 
         ignitionConverter = new GenericCrafter("ignitionConverter"){{
             alwaysUnlocked = true;
@@ -417,7 +442,7 @@ public class ZytheronBlocks {
                 new ItemStack(ZytheronItems.black, 50),
             });
             ammoTypes.putAll(
-            ZytheronItems.green, new BasicBulletType(6f,14f){{
+            ZytheronItems.green, new BasicBulletType(6f,22f){{
                 ammoMultiplier = 5f;
                 lifetime = 31;
 
@@ -480,7 +505,7 @@ public class ZytheronBlocks {
                 new ItemStack(ZytheronItems.black, 110),
             });
             ammoTypes.putAll(
-            ZytheronItems.green, new BasicBulletType(8.5f,18f){{
+            ZytheronItems.green, new BasicBulletType(8.5f,34f){{
                 ammoMultiplier = 5f;
                 lifetime = 27;
 
@@ -502,7 +527,7 @@ public class ZytheronBlocks {
             }});
             size = 3;
             recoil = 1f;
-            reload = 11.4f;
+            reload = 10.44f;
             inaccuracy = 4f;
             shootCone = 2f;
             maxAmmo = 32;
@@ -604,6 +629,7 @@ public class ZytheronBlocks {
             predictTarget = false;
             health = 300;
             flags = EnumSet.of(BlockFlag.turret);
+            consumeLiquid(ZytheronLiquids.rocketfuel, 2f / 60f);
             coolant = consumeCoolant(3f / 60);
             drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
@@ -620,7 +646,7 @@ public class ZytheronBlocks {
             ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 3f;
 
-                spawnUnit = new MissileUnitType("launcher-missile-red"){{
+                spawnUnit = newi9issileUnitType("launcher-missile-red"){{
                     speed = 2.4f;
                     maxRange = 6f;
                     lifetime = 170f;
@@ -678,6 +704,7 @@ public class ZytheronBlocks {
             predictTarget = false;
             health = 1100;
             flags = EnumSet.of(BlockFlag.turret);
+            consumeLiquid(ZytheronLiquids.rocketfuel, 3.5f / 60f);
             coolant = consumeCoolant(14f / 60);
             drawer = new DrawTurret("black-");
             //shootEffect = SLFx.silviriumHit1Effect;
@@ -740,7 +767,7 @@ public class ZytheronBlocks {
 
                     fogRadius = 6f;
 
-                    health = 160f;
+                    health = 180f;
                     
                         weapons.add(new Weapon(){{
                         shootCone = 360f;
@@ -774,6 +801,7 @@ public class ZytheronBlocks {
             predictTarget = false;
             health = 1850;
             flags = EnumSet.of(BlockFlag.turret);
+            consumeLiquid(ZytheronLiquids.rocketfuel, 5f / 60f);
             coolant = consumeCoolant(14f / 60);
             //shootEffect = SLFx.silviriumHit1Effect;
 
@@ -804,7 +832,7 @@ public class ZytheronBlocks {
             candle = new ItemTurret("candle"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.ignition, 40),
+                new ItemStack(ZytheronItems.volcanite, 40),
                 new ItemStack(ZytheronItems.black, 15),
             });
             ammoTypes.putAll(
@@ -840,7 +868,7 @@ public class ZytheronBlocks {
         flame = new ItemTurret("flame"){{
             alwaysUnlocked = true;
             requirements(Category.turret, new ItemStack[]{
-                new ItemStack(ZytheronItems.ignition, 100),
+                new ItemStack(ZytheronItems.volcanite, 100),
                 new ItemStack(ZytheronItems.black, 80),
             });
             ammoTypes.putAll(
@@ -918,6 +946,11 @@ public class ZytheronBlocks {
         script = new MessageBlock("script"){{
             requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
         }};
+
+        hologram = new HologramBlock("hologram"){{
+            requirements(Category.logic, with(ZytheronItems.volcanite, 6, ZytheronItems.green, 5));
+        }};
+
 
         //Testing
         m5 = new MessageBlock("m5"){{

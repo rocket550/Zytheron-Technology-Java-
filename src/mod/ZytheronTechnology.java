@@ -8,6 +8,7 @@ import mindustry.mod.Mod;
 import mindustry.ui.dialogs.BaseDialog;
 import content.ZytheronUnits;
 import content.ZytheronItems;
+import content.ZytheronLiquids;
 import content.ZytheronBlocks;
 import content.ZytheronColors;
 import planets.ZytheronPlanet;
@@ -31,6 +32,7 @@ public class ZytheronTechnology extends Mod{
         //and the load
         ZytheronUnits.load();
         ZytheronItems.load();
+        ZytheronLiquids.load();
         ZytheronBlocks.load();
         ZytheronPlanet.load();
     }
