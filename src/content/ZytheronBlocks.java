@@ -646,7 +646,7 @@ public class ZytheronBlocks {
             ZytheronItems.red, new MissileBulletType(3f,35f){{
                 ammoMultiplier = 3f;
 
-                spawnUnit = newi9issileUnitType("launcher-missile-red"){{
+                spawnUnit = MissileUnitType("launcher-missile-red"){{
                     speed = 2.4f;
                     maxRange = 6f;
                     lifetime = 170f;
