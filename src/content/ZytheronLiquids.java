@@ -14,10 +14,10 @@ public static Liquid rocketfuel;
             explosiveness = 0.8f;
             //heatCapacity = 0.3f;
             barColor = Color.valueOf("ff6000");
-            effect = StatusEffects.tarred;
+            //effect = StatusEffects.tarred;
             boilPoint = 0.65f;
             //gasColor = Color.grays(0.4f);
-            canStayOn.add(water);
+            //canStayOn.add(water);
         }};
 
     }

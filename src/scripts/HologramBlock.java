@@ -38,7 +38,7 @@ public class HologramBlock extends Block{
         drawDisabled = false;
         envEnabled = Env.any;
 
-        config(String.class, (MessageBuild tile, String text) -> {
+        config(String.class, (HologramMessageBuild tile, String text) -> {
             if(text.length() > maxTextLength || !accessible()){
                 return; //no.
             }
@@ -70,7 +70,7 @@ public class HologramBlock extends Block{
         return accessible();
     }
 
-    public class MessageBuild extends Building implements LReadable, LPrintable{
+    public class HologramMessageBuild extends Building implements LReadable, LPrintable{
         public StringBuilder message = new StringBuilder();
 
         @Override

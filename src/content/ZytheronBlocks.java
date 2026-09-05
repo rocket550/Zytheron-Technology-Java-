@@ -52,7 +52,7 @@ public class ZytheronBlocks {
     greenConveyor, basicJunction, basicRouter, basicSorter, basicInvertedSorter, basicOverflowGate, basicUnderflowGate,
     
     //Factory
-    stoneficator, redFactory,
+    stoneficator, redFactory, rocketfuelmixer,
 
     //Converters
     volcaniteConverter, greenConverter, ignitionConverter, redConverter,
@@ -209,9 +209,10 @@ public class ZytheronBlocks {
             lightLiquid = ZytheronLiquids.rocketfuel;
 
             //consumePower(1f);
-            consumeLiquid(Liquids.water, 9f / 60f);
+            consumeLiquid(Liquids.oil, 9f / 60f);
             consumeItem(ZytheronItems.ignition,1);
-            outputItem = new ItemStack(ZytheronItems.red, 1);
+            outputLiquid = new LiquidStack(ZytheronLiquds.rocketfuel, 9f / 60f);
+            //outputItem = new ItemStack(ZytheronItems.red, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
         }};
 
