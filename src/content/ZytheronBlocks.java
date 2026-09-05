@@ -36,9 +36,11 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
+import scripts.HologramBlock;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
 import mindustry.content.Items;
+import mindustry.content.Liquids;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
@@ -211,7 +213,7 @@ public class ZytheronBlocks {
             //consumePower(1f);
             consumeLiquid(Liquids.oil, 9f / 60f);
             consumeItem(ZytheronItems.ignition,1);
-            outputLiquid = new LiquidStack(ZytheronLiquds.rocketfuel, 9f / 60f);
+            outputLiquid = new LiquidStack(ZytheronLiquids.rocketfuel, 9f / 60f);
             //outputItem = new ItemStack(ZytheronItems.red, 1);
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame(ZytheronColors.redColor));
         }};
